@@ -17,6 +17,9 @@ var app = (function(document, $) {
 	return {
 		init: _init
 	};
+
+	// Custom js place here
+
 })(document, jQuery);
 
 (function() {
