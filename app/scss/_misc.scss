@@ -19,6 +19,15 @@
 	top: 0;
 }
 
+%tomato-hover {
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: tomato;
+		color: $white;
+	}
+}
+
 
 // Clearfix
 .clearfix:after {

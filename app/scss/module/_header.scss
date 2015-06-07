@@ -143,12 +143,8 @@
 	text-transform: uppercase;
 	padding: 10px 30px;
 	margin-top: -7px;
-	transition: background-color .3s;
-
-	&:hover {
-		background-color: tomato;
-		color: $white;
-	}
+	
+	@extend %tomato-hover;
 }
 
 @media only screen and (min-width: 40.0625em) {
