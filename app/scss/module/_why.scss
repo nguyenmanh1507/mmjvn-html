@@ -1,0 +1,102 @@
+.why-vn {
+	padding: 5em 0 1.88em;
+
+	h1, 
+	h2, 
+	h3, 
+	h4,
+	h5,
+	h6 {
+		color: $steel;
+		font-weight: 100;
+		font-size: 2.25rem;
+	}
+}
+
+.activity {
+
+	.accordion .accordion-navigation > a, 
+	.accordion dd > a {
+		padding: 15px 0;
+		line-height: 1em;
+		border-bottom: 1px solid $iron;
+		color: $tuatara;
+		transition: color .3s ease-in;
+
+		&:hover {
+			color: $primary-color;
+
+			i.fa {
+				color: $tuatara;
+			}
+		}
+
+		i.fa {
+			color: $primary-color;
+			display: block;
+			float: right;
+			transition: color .3s ease-in;
+		}
+	}
+
+	.accordion .accordion-navigation > .content, 
+	.accordion dd > .content {
+		font-style: italic;
+		padding: 0.31em 0 0.31em 1.25em;
+	}
+}
+
+.company-info {
+	border: 1px solid $iron;
+
+	.tabs {
+		display: flex;
+	}
+
+	.tabs dd, 
+	.tabs .tab-title {
+		border-bottom: 1px solid $iron;
+		border-right: 1px solid $iron;
+		text-align: center;
+		flex: 1;
+
+		&.active a {
+			color: $primary-color;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	.tabs dd > a, 
+	.tabs .tab-title > a {
+		color: $tuatara;
+		padding: 0.5em 0;
+		transition: color .3s ease-in;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	.tabs-content {
+		margin: 0;
+		padding: 1.25em;
+
+		> .content {
+			padding: 0;
+		}
+
+		img {
+			display: block;
+			float: left;
+			margin-right: 1.25em;
+		}
+
+		p {
+			line-height: 1.2;
+		}
+	}
+}
+

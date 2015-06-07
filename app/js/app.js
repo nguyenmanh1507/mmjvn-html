@@ -14,38 +14,54 @@ var app = (function(document, $) {
             });
 			_userAgentInit();
 
-		// Custom js place here
+			// Custom js place here
 
-		// search box appear when click
-		var searchForm = $('.search-form');
-		var fakeSearchBtn = $('.search-form__icon');
+			// search box appear when click
+			var searchForm = $('.search-form');
+			var fakeSearchBtn = $('.search-form__icon');
 
-		fakeSearchBtn.on('click', function() {
-			searchForm.addClass('is-visible');
-		});
+			fakeSearchBtn.on('click', function() {
+				searchForm.addClass('is-visible');
+			});
 
-		// Slider
-		$('#carousel').flexslider({
-    animation: 'slide',
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    itemWidth: 222,
-    itemMargin: 5,
-    asNavFor: '#slider',
-		directionNav: false
-  });
- 	
- 	// Carousel
-  $('#slider').flexslider({
-    animation: 'fade',
-    controlNav: false,
-    animationLoop: false,
-    nextText: '',
-    prevText: '',
-    slideshow: false,
-    sync: '#carousel'
-  });
+			// Slider
+			$('#carousel').flexslider({
+		    animation: 'slide',
+		    controlNav: false,
+		    animationLoop: false,
+		    slideshow: false,
+		    itemWidth: 222,
+		    itemMargin: 5,
+		    asNavFor: '#slider',
+				directionNav: false
+		  });
+		 	
+		 	// Carousel
+		  $('#slider').flexslider({
+		    animation: 'slide',
+		    controlNav: false,
+		    animationLoop: false,
+		    nextText: '',
+		    prevText: '',
+		    slideshow: false,
+		    sync: '#carousel'
+		  });
+
+		  // Change icon when click accordion
+		  var accBtn = $('.activiti .accordion-navigation').find('a');
+
+		  $('.accordion').on('toggled', function(event, accordion) {
+		    console.log(accordion);
+		    var iconMinus = accordion.prev().children('.fa');
+		    var iconPlus = accordion.closest('.accordion').find('a').children('.fa');
+
+		    console.log(event);
+
+		    console.log(iconPlus);
+		    iconPlus.removeClass('fa-minus-circle').addClass('fa-plus-circle');
+		    iconMinus.removeClass('fa-plus-circle').addClass('fa-minus-circle');
+
+		  });
 
 		};
 	return {

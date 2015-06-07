@@ -1,7 +1,10 @@
 /* all app scss styles here */
 
+@import 'base';
+
 // Module
 @import 'module/header';
 @import 'module/slider';
+@import 'module/why';
 
 @import 'misc';

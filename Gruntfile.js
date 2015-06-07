@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 
-    require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt);
 
 
 	grunt.initConfig({
@@ -24,7 +24,11 @@ module.exports = function(grunt) {
 			}
 		},
 
-		
+		autoprefixer: {
+			no_dest: {
+				src: '<%= app %>/css/app.css'
+			}
+		},
 
 		jshint: {
 			options: {
@@ -150,10 +154,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('compile-sass', ['sass']);
 	grunt.registerTask('bower-install', ['wiredep']);
 	
-	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('default', ['compile-sass', 'autoprefixer', 'bower-install', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
-	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
+	grunt.registerTask('publish', ['compile-sass', 'autoprefixer', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 
 };

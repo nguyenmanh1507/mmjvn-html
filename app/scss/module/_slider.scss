@@ -116,17 +116,17 @@
 				z-index: 10;
 
 				img {
-					-webkit-filter: none;
+					filter: none;
 				}
 			}
 
 			img {
 				cursor: pointer;
-				-webkit-filter: grayscale(1);
+				filter: grayscale(1);
 				transition: all .3s ease-in;
 
 				&:hover {
-					-webkit-filter: none;
+					filter: none;
 				}
 			}
 		}
