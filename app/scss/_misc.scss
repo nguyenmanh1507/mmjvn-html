@@ -18,3 +18,11 @@
 	right: 0;
 	top: 0;
 }
+
+
+// Clearfix
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}

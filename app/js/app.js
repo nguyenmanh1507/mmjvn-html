@@ -18,13 +18,35 @@ var app = (function(document, $) {
 
 		// search box appear when click
 		var searchForm = $('.search-form');
-		var searchField = $('.search-form__field');
 		var fakeSearchBtn = $('.search-form__icon');
-		var searchBtn = $('.search-form__btn');
 
 		fakeSearchBtn.on('click', function() {
 			searchForm.addClass('is-visible');
 		});
+
+		// Slider
+		$('#carousel').flexslider({
+    animation: 'slide',
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 222,
+    itemMargin: 5,
+    asNavFor: '#slider',
+		directionNav: false
+  });
+ 	
+ 	// Carousel
+  $('#slider').flexslider({
+    animation: 'fade',
+    controlNav: false,
+    animationLoop: false,
+    nextText: '',
+    prevText: '',
+    slideshow: false,
+    sync: '#carousel'
+  });
+
 		};
 	return {
 		init: _init

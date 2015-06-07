@@ -1,0 +1,139 @@
+#slideshow {
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.flexslider {
+	border: none;
+	margin-bottom: 1px;
+}
+
+// Slider
+#slider {
+	overflow: hidden;
+
+	&:hover .slider-item .slider-item__info {
+		transform: translateY(0);
+	}
+
+	.flex-prev, .flex-next {
+		background-color: $black;
+		background-color: rgba($black, .6);
+		color: $white;
+		height: 60px;
+		width: 60px;
+		line-height: 60px;
+		text-align: center;
+		opacity: 1;
+
+		&:hover {
+			background-color: $primary-color;
+			background-color: rgba(#24b3cb, .6);
+		}
+	}
+
+	.flex-prev {
+		left: 0;
+	}
+
+	.flex-next {
+		right: 0;
+	}
+
+	.flex-direction-nav a:before {
+		font-family: 'FontAwesome';
+		content: '\f104';
+		color: $white;
+	}
+
+	.flex-direction-nav a.flex-next:before {
+		content: '\f105';
+	}
+
+	.slider-item {
+		position: relative;
+		
+		.slider-item__info {
+			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+			color: $white;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			padding: 2% 18%;
+			text-align: right;
+			transform: translateY(63%);
+			transition: transform .3s ease-in;
+
+			h3 {
+				font-size: 2.25rem;
+				font-weight: 700;
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			p {
+				display: inline-block;
+				width: 60%;
+			}
+
+			a {
+				display: inline-block;
+				border: 1px solid $white;
+				color: $white;
+				padding: 5px 25px;
+				font-weight: 700;
+				text-transform: uppercase;
+				transition: all .3s ease-in;
+
+				&:hover {
+					border-color: $primary-color;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+// Carousel
+#carousel {
+
+	.slides {
+		text-align: center;
+		width: 100% !important;
+
+		li {
+			display: inline-block !important;
+			float: none !important;
+			transition: transform .3s ease-in;
+
+			&.flex-active-slide {
+				border-bottom: 5px solid $primary-color;
+				box-shadow: 1px 2px 4px rgba($black, .4);
+				// transform: scale(1.2);
+				position: relative;
+				z-index: 10;
+
+				img {
+					-webkit-filter: none;
+				}
+			}
+
+			img {
+				cursor: pointer;
+				-webkit-filter: grayscale(1);
+				transition: all .3s ease-in;
+
+				&:hover {
+					-webkit-filter: none;
+				}
+			}
+		}
+	}
+
+	// .flex-viewport {
+	// 	overflow: visible !important;
+	// 	overflow-x: hidden;
+	// }
+}

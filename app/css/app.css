@@ -6202,6 +6202,95 @@ th.hide-for-touch {
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 2.06em 0 0; } }
 
+#slideshow {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto; }
+
+.flexslider {
+  border: none;
+  margin-bottom: 1px; }
+
+#slider {
+  overflow: hidden; }
+  #slider:hover .slider-item .slider-item__info {
+    transform: translateY(0); }
+  #slider .flex-prev, #slider .flex-next {
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    opacity: 1; }
+    #slider .flex-prev:hover, #slider .flex-next:hover {
+      background-color: #24b3cb;
+      background-color: rgba(36, 179, 203, 0.6); }
+  #slider .flex-prev {
+    left: 0; }
+  #slider .flex-next {
+    right: 0; }
+  #slider .flex-direction-nav a:before {
+    font-family: 'FontAwesome';
+    content: '\f104';
+    color: #FFFFFF; }
+  #slider .flex-direction-nav a.flex-next:before {
+    content: '\f105'; }
+  #slider .slider-item {
+    position: relative; }
+    #slider .slider-item .slider-item__info {
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+      color: #FFFFFF;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      padding: 2% 18%;
+      text-align: right;
+      transform: translateY(63%);
+      transition: transform .3s ease-in; }
+      #slider .slider-item .slider-item__info h3 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        text-transform: uppercase; }
+      #slider .slider-item .slider-item__info p {
+        display: inline-block;
+        width: 60%; }
+      #slider .slider-item .slider-item__info a {
+        display: inline-block;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        padding: 5px 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all .3s ease-in; }
+        #slider .slider-item .slider-item__info a:hover {
+          border-color: #24b3cb;
+          color: #24b3cb; }
+
+#carousel .slides {
+  text-align: center;
+  width: 100% !important; }
+  #carousel .slides li {
+    display: inline-block !important;
+    float: none !important;
+    transition: transform .3s ease-in; }
+    #carousel .slides li.flex-active-slide {
+      border-bottom: 5px solid #24b3cb;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 10; }
+      #carousel .slides li.flex-active-slide img {
+        -webkit-filter: none; }
+    #carousel .slides li img {
+      cursor: pointer;
+      -webkit-filter: grayscale(1);
+      transition: all .3s ease-in; }
+      #carousel .slides li img:hover {
+        -webkit-filter: none; }
+
 .top-header .socials-list a, .lang-and-search .language-list a {
   color: #9aa7af;
   transition: color .3s ease-in; }
@@ -6217,3 +6306,8 @@ th.hide-for-touch {
   position: absolute;
   right: 0;
   top: 0; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
