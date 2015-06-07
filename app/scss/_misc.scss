@@ -1,0 +1,20 @@
+// placeholder
+%blue-hover {
+	color: $jet;
+	transition: color .3s ease-in;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+%button-search {
+	border-radius: 0 10px 10px 0;
+	color: $jet;
+	display: inline-block;
+	font-size: 18px;
+	background-color: transparent;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

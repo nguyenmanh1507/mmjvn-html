@@ -13,12 +13,22 @@ var app = (function(document, $) {
                 $(document).foundation('joyride', 'start');
             });
 			_userAgentInit();
+
+		// Custom js place here
+
+		// search box appear when click
+		var searchForm = $('.search-form');
+		var searchField = $('.search-form__field');
+		var fakeSearchBtn = $('.search-form__icon');
+		var searchBtn = $('.search-form__btn');
+
+		fakeSearchBtn.on('click', function() {
+			searchForm.addClass('is-visible');
+		});
 		};
 	return {
 		init: _init
 	};
-
-	// Custom js place here
 
 })(document, jQuery);
 
