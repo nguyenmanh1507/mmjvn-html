@@ -28,7 +28,8 @@
 		&.is-visible {
 
 			input {
-				transform: translateX(0%);
+				visibility: visible;
+				width: 100%;
 			}
 
 			button {
@@ -48,8 +49,10 @@
 			box-shadow: none;
 			color: $jet;
 			height: 30px;
+			float: right;
 			margin: 0;
-			transform: translateX(100%);
+			visibility: hidden;
+			width: 0%;
 			transition: all .3s ease-in;
 
 			@include placeholder {

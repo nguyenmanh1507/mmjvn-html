@@ -6176,7 +6176,8 @@ a:focus, a:hover {
   position: relative;
   overflow: hidden; }
   .lang-and-search .search-form.is-visible input {
-    transform: translateX(0%); }
+    visibility: visible;
+    width: 100%; }
   .lang-and-search .search-form.is-visible button {
     background-color: #9aa7af;
     color: #FFFFFF; }
@@ -6189,8 +6190,10 @@ a:focus, a:hover {
     box-shadow: none;
     color: #9aa7af;
     height: 30px;
+    float: right;
     margin: 0;
-    transform: translateX(100%);
+    visibility: hidden;
+    width: 0%;
     transition: all .3s ease-in; }
     .lang-and-search .search-form input::-webkit-input-placeholder {
       color: #9aa7af;
@@ -6262,8 +6265,7 @@ a:focus, a:hover {
     padding: 0 2.06em 0 0; } }
 
 #slideshow {
-  max-width: 1600px;
-  width: 100%;
+  max-width: 1920px;
   margin: 0 auto; }
 
 .flexslider {
@@ -6540,7 +6542,7 @@ a:focus, a:hover {
 .quote {
   background: url(../images/quote/quote-bg.jpg) no-repeat left top;
   background-size: cover;
-  max-width: 1600px;
+  max-width: 1920px;
   padding: 5em 0 3.13em;
   margin: 0 auto; }
   .quote .flex-viewport {
@@ -6552,7 +6554,10 @@ a:focus, a:hover {
     .quote .flex-control-paging li a.flex-active, .quote .flex-control-paging li a:hover {
       background: rgba(255, 255, 255, 0.8); }
   .quote .flex-control-nav {
-    bottom: 0; }
+    bottom: 0;
+    left: 0; }
+  .quote .flex-direction-nav {
+    display: none; }
 
 .quote-content .quote-img {
   display: inline-block;
