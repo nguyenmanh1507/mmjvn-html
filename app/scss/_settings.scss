@@ -1416,6 +1416,7 @@ $topbar-bg-color: transparent;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
+$topbar-height: rem-calc(76);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1481,6 +1482,7 @@ $topbar-link-bg-color-hover: transparent;
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+$topbar-breakpoint: (63.5rem);
 // $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
 
 // Top-bar input styles

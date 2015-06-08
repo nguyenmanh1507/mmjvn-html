@@ -110,19 +110,44 @@
 // Navigation
 .site-navigation {
 	box-shadow: 0 -2px 4px 0 rgba($jet, .2);
-	padding: 10px;
+	padding: 10px 0;
 }
 
 .top-bar-section ul li {
 	background-color: transparent;
 }
 
-.top-bar {
-	height: auto;
-
-	.name {
-		height: auto;
+.top-bar .toggle-topbar.menu-icon a {
+	color: $primary-color;
+	font-size: 18px;
+	
+	span:after {
+		box-shadow: 0 0 0 1px $primary-color, 
+								0 7px 0 1px $primary-color, 
+								0 14px 0 1px $primary-color; 
 	}
+}
+
+.top-bar.expanded .toggle-topbar a {
+	color: $steel;
+
+	span::after {
+		box-shadow: 0 0 0 1px $steel, 
+									0 7px 0 1px $steel, 
+									0 14px 0 1px $steel; 
+	}
+}
+
+@media only screen and (min-width: 63.5rem) {
+
+	.top-bar {
+		height: auto;
+
+		.name {
+			height: auto;
+		}
+	}
+
 }
 
 .top-bar-section ul li > a.button--apply {
@@ -136,12 +161,29 @@
 }
 
 @media only screen and (min-width: 40.0625em) {
-	.top-bar-section {
-		margin-top: 15px;
-	}
-
 	.top-bar-section li:not(.has-form) a:not(.button) {
 		padding: 0 2.06em 0 0;
+	}
+}
+
+
+@media only screen and (max-width: 63.4rem) {
+	.top-bar-section ul {
+		text-align: center;
+
+		a {
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			margin-bottom: 30px;
+		}
+	}
+
+	.top-bar-section ul li > a,
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		padding: 0;
 	}
 }
 
