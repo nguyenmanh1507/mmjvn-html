@@ -1,0 +1,97 @@
+.fp-recent-news {
+	padding: 6.25em 0 0;
+}
+
+.news {
+	max-width: 19.0625rem;
+	margin-bottom: 2.19em;
+
+	img {
+		width: 100%;
+	}
+
+	.news-content {
+		background-color: $snow;
+		border: 1px solid $gainsboro;
+		padding: 1.25em;
+		position: relative;
+
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 12px solid $snow;
+			position: absolute;
+			right: 10%;
+			top: -12px;
+		}
+
+		.news-content__title {
+			font-size: 1rem;
+			margin: 0;
+
+			a {
+				color: $steel;
+				transition: color .3s ease-in;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.news-content__meta,
+		p {
+			font-size: 0.875rem;
+
+			a {
+				color: $jet;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.news-content__meta {
+			font-style: italic;
+			font-weight: 300;
+			margin-bottom: 0.31em;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.recent-news-description {
+	
+	h1,
+	h2,
+	h3,
+	h4 {
+		line-height: 0.9em;
+		font-size: 2.25rem;
+		color: $steel;
+		font-weight: 300;
+		margin: 0 0 0.56em;
+	}
+
+	p {
+		margin: 0 0 1.56em;
+	}
+
+	a {
+		font-size: 0.875rem;
+		font-weight: 300;
+		padding: 0.71em 1.79em;
+		border-radius: 5px;
+		background-color: $primary-color;
+		text-transform: uppercase;
+		color: $white;
+		@extend %tomato-hover;
+	}
+}

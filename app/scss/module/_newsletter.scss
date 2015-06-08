@@ -1,0 +1,45 @@
+.newsletter {
+	padding-bottom: 4.69em;
+
+	h1, 
+	h2,
+	h3,
+	h4 {
+		font-size: 1.875rem;
+		font-weight: 300;
+		color: $steel;
+	}
+}
+
+.form-newsletter {
+		&:before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			background-color: red;
+		}
+
+	[type='email'] {
+		background: $white url(../images/mail-icon.png) no-repeat 3% 14px;
+		border: 1px solid $steel;
+		box-shadow: none;
+		color: $steel;
+		text-transform: uppercase;
+		height: auto;
+		margin: 0;
+		padding: 11px 10px 11px 55px;
+
+		@include placeholder {
+			color: $steel;
+		}
+
+		&:focus {
+			background: $white url(../images/mail-icon.png) no-repeat 3% 14px;
+		}
+	}
+
+	[type='submit'] {
+		@extend %button-border-black;
+		@extend %button-border-hover;
+	}
+}

@@ -28,10 +28,55 @@
 	}
 }
 
+%button-border-hover  {
+	transition: all .3s ease-in;
+
+	&:hover {
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+}
+
+%button-border-black {
+	background-color: transparent;
+	border: 1px solid $steel;
+	color: $steel;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 0.63em 2.19em;
+	margin: 0;
+}
 
 // Clearfix
 .clearfix:after {
   content:"";
   display:table;
   clear:both;
+}
+
+%clearfix {
+	&:after {
+		content:"";
+	  display:table;
+	  clear:both;
+	}
+}
+
+// Plygon BG
+.polygon-bg {
+	background-color: $smoke;
+	background-image: url(../images/polygon-1.png), 
+										url(../images/polygon-2.png), 
+										url(../images/polygon-3.png), 
+										url(../images/polygon-4.png);
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: left top, right top, right bottom, left bottom;
+}
+
+// Placeholder function
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
 }

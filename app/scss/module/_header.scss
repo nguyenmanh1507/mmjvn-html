@@ -52,26 +52,11 @@
 			transform: translateX(100%);
 			transition: all .3s ease-in;
 
-			&::-webkit-input-placeholder {
-   			color: $jet;
-   			font-style: italic;
-   			font-size: 14px;
-   			font-weight: 300;
-			}
-
-			&:-moz-placeholder { /* Firefox 18- */
-			  color: $jet;  
-			  font-style: italic;
-			}
-
-			&::-moz-placeholder {  /* Firefox 19+ */
-			  color: $jet;  
-			  font-style: italic;
-			}
-
-			&:-ms-input-placeholder {  
-			  color: $jet; 
-			  font-style: italic; 
+			@include placeholder {
+				color: $jet;
+				font-style: italic;
+				font-size: 14px;
+				font-weight: 300;
 			}
 		}
 

@@ -18,10 +18,12 @@ var app = (function(document, $) {
 
 			// search box appear when click
 			var searchForm = $('.search-form');
+			var searchField = $('.search-form__field');
 			var fakeSearchBtn = $('.search-form__icon');
 
 			fakeSearchBtn.on('click', function() {
 				searchForm.addClass('is-visible');
+				searchField.focus();
 			});
 
 			// Slider
@@ -47,8 +49,12 @@ var app = (function(document, $) {
 		    sync: '#carousel'
 		  });
 
+		  // Quote slider
+		  $('#quote-slider').flexslider({
+		  	animation: 'slide'
+		  });
+
 		  // Change icon when click accordion
-		  var accBtn = $('.activiti .accordion-navigation').find('a');
 
 		  $('.accordion').on('toggled', function(event, accordion) {
 		    console.log(accordion);

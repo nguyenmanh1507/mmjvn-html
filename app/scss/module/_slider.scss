@@ -85,12 +85,8 @@
 				padding: 5px 25px;
 				font-weight: 700;
 				text-transform: uppercase;
-				transition: all .3s ease-in;
-
-				&:hover {
-					border-color: $primary-color;
-					color: $primary-color;
-				}
+				
+				@extend %button-border-hover;
 			}
 		}
 	}

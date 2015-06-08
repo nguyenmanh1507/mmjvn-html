@@ -24,11 +24,11 @@ module.exports = function(grunt) {
 			}
 		},
 
-		autoprefixer: {
-			no_dest: {
-				src: '<%= app %>/css/app.css'
-			}
-		},
+		// autoprefixer: {
+		// 	no_dest: {
+		// 		src: '<%= app %>/css/app.css'
+		// 	}
+		// },
 
 		jshint: {
 			options: {
@@ -104,10 +104,10 @@ module.exports = function(grunt) {
 				files: '<%= app %>/scss/**/*.scss',
 				tasks: ['sass']
 			},
-			autoprefixer: {
-				files: '<%= app %>/css/app.css',
-				tasks: ['autoprefixer']
-			},
+			// autoprefixer: {
+			// 	files: '<%= app %>/css/app.css',
+			// 	tasks: ['autoprefixer']
+			// },
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
@@ -157,11 +157,13 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('compile-sass', ['sass']);
 	grunt.registerTask('bower-install', ['wiredep']);
+
+	// grunt.registerTask('prefix', ['autoprefixer']);
 	
-	grunt.registerTask('default', ['compile-sass', 'autoprefixer', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
-	grunt.registerTask('publish', ['compile-sass', 'autoprefixer', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
+	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 
 };

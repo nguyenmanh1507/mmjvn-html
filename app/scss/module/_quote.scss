@@ -1,0 +1,92 @@
+.quote {
+	background: url(../images/quote/quote-bg.jpg) no-repeat left top;
+	background-size: cover;
+	max-width: 1600px;
+	padding: 5em 0 3.13em;
+	margin: 0 auto;
+
+	.flex-viewport {
+		margin-bottom: 40px;
+	}
+
+	.flex-control-paging li a {
+		background: rgba($white, .2);
+		height: 14px;
+		width: 14px;
+
+		&.flex-active,
+		&:hover {
+			background: rgba($white, .8);
+		}
+	}
+
+	.flex-control-nav {
+		bottom: 0;
+	}
+}
+
+.quote-content {
+
+	.quote-img {
+		display: inline-block;
+		position: relative;
+
+		img {
+			border-radius: 50%;
+			max-width: 18.75rem;
+			border: 0.5rem solid $white;
+		}
+
+		&:before {
+			background: url(../images/quote/quote-tail.png) no-repeat left top;
+			content: '';
+			height: 63px;
+			width: 57px;
+			position: absolute;
+			right: -49px;
+			top: 135px;
+		}
+	}
+
+	blockquote {
+		border-left: none;
+		font-style: italic;
+		margin: 0;
+
+		cite {
+			color: $steel;
+			font-size: 3rem;
+			font-style: normal;
+
+			&:before {
+				content: '';
+			}
+		}
+
+		p {
+			color: $white;
+			font-size: 1.5rem;
+			padding: 1.88em;
+			margin: 0;
+			position: relative;
+
+			&:before,
+			&:after {
+				font-family: 'FontAwesome';
+				position: absolute;
+			}
+
+			&:before {
+				content: '\f10d';
+				left: 0;
+				top: 0;
+			}
+
+			&:after {
+				content: '\f10e';
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
