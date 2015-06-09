@@ -25,7 +25,7 @@ var app = (function(document, $) {
 		    animation: 'slide',
 		    controlNav: false,
 		    animationLoop: false,
-		    slideshow: false,
+		    slideshowSpeed: 10000,
 		    itemWidth: 222,
 		    itemMargin: 5,
 		    asNavFor: '#slider',
@@ -39,7 +39,7 @@ var app = (function(document, $) {
 		    animationLoop: false,
 		    nextText: '',
 		    prevText: '',
-		    slideshow: false,
+		    slideshowSpeed: 10000,
 		    sync: '#carousel'
 		  });
 
