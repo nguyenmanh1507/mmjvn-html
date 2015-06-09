@@ -30,6 +30,10 @@
 
 .activity {
 
+	@media only screen and (max-width: 64rem) {
+		margin-bottom: 1.25em;
+	}
+
 	.accordion .accordion-navigation > a, 
 	.accordion dd > a {
 		padding: 15px 0;
@@ -65,7 +69,9 @@
 	border: 1px solid $iron;
 
 	.tabs {
-		display: flex;
+		@media only screen and (min-width: 40.0625rem) {
+			display: flex;
+		}
 	}
 
 	.tabs dd, 
@@ -73,7 +79,11 @@
 		border-bottom: 1px solid $iron;
 		border-right: 1px solid $iron;
 		text-align: center;
-		flex: 1;
+		float: none;
+
+		@media only screen and (min-width: 40.0625rem) {
+			flex: 1;
+		}
 
 		&.active a {
 			color: $primary-color;

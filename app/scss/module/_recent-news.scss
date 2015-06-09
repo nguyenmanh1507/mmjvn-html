@@ -5,6 +5,12 @@
 .news {
 	max-width: 19.0625rem;
 	margin-bottom: 2.19em;
+	margin-right: 0.9375rem;
+
+	@media only screen and (max-width: 40rem) {
+		margin-right: auto;
+		margin-left: auto;
+	}
 
 	img {
 		width: 100%;
@@ -68,7 +74,7 @@
 }
 
 .recent-news-description {
-	
+
 	h1,
 	h2,
 	h3,
@@ -93,5 +99,32 @@
 		text-transform: uppercase;
 		color: $white;
 		@extend %tomato-hover;
+	}
+}
+
+.recent-news-navigation {
+	margin: 2.5em 0;
+
+	@media only screen and (max-width: 40rem) {
+		text-align: center;
+	}
+
+	a {
+		background-color: $jet;
+		border-radius: 50%;
+		display: inline-block;
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: $white;
+		font-size: 24px;
+		margin-right: 15px;
+		transition: background-color .3s ease-in;
+
+		&:focus,
+		&:hover {
+			background-color: $primary-color;
+		}
 	}
 }

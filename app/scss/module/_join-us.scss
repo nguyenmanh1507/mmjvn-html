@@ -25,9 +25,16 @@
 
 		li {
 			display: inline-block;
-			padding: 0 2.5em 1.88em;
 			margin-right: 7.81em;
 			border-bottom: 5px solid $jet;
+
+			@media only screen and (max-width: 32.875rem) {
+				display: block;
+				margin-right: 0;
+				margin-bottom: 20px;
+				text-align: center;
+				border: none;
+			}
 
 			&:last-child {
 				margin-right: 0;
@@ -35,12 +42,33 @@
 
 			&.active {
 				border-color: $primary-color;
+
+				@media only screen and (max-width: 32.875rem) {
+					a {
+						color: $primary-color;
+						font-weight: bold;
+					}
+				}
 			}
 
 			a {
 				color: $steel;
-				font-size: 1.875rem;
+				display: block;
+				font-size: 1.875rem; 
 				font-weight: 300;
+				padding: 0 2.5em 1em;
+
+				@media only screen and (max-width: 56.25rem) {
+					font-size: 1.5rem;
+				}
+
+				@media only screen and (max-width: 46.25rem) {
+					padding: 0 0 0.5em;
+				}
+
+				@media only screen and (max-width: 32.875rem) {
+					display: inline;
+				}
 			}
 		}
 	}

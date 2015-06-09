@@ -7,23 +7,17 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 			$(document).foundation();
-            // needed to use joyride
-            // doc: http://foundation.zurb.com/docs/components/joyride.html
-            $(document).on('click', '#start-jr', function () {
-                $(document).foundation('joyride', 'start');
-            });
+       
 			_userAgentInit();
 
 			// Custom js place here
 
 			// search box appear when click
 			var searchForm = $('.search-form');
-			var searchField = $('.search-form__field');
 			var fakeSearchBtn = $('.search-form__icon');
 
 			fakeSearchBtn.on('click', function() {
 				searchForm.addClass('is-visible');
-				searchField.focus();
 			});
 
 			// Slider
@@ -49,9 +43,33 @@ var app = (function(document, $) {
 		    sync: '#carousel'
 		  });
 
+		  // Recent news slider
+		  var rnSlider = $('#news-recent-slider');
+		  rnSlider.owlCarousel({
+		  	autoPlay: 10000,
+		  	items: 2,
+		  	itemsDesktop: [1024, 2],
+		  	itemsDesktopSmall : [900, 2],
+		  	itemsTablet: [640, 1],
+		  	itemsMobile: false
+		  });
+
+		  // custom navigation events
+		  $('.rnn-prev').click(function() {
+		  	rnSlider.trigger('owl.prev');
+		  	return false;
+		  });
+
+		  $('.rnn-next').click(function() {
+		  	rnSlider.trigger('owl.next');
+		  	return false;
+		  });
+
+
 		  // Quote slider
 		  $('#quote-slider').flexslider({
-		  	animation: 'slide'
+		  	animation: 'slide',
+		  	slideshow: false
 		  });
 
 		  // Change icon when click accordion

@@ -95,8 +95,11 @@
 #carousel {
 
 	.slides {
-		text-align: center;
-		width: 100% !important;
+
+		@media only screen and (min-width: 85.3125rem) {
+			text-align: center;
+			width: 100% !important;	
+		}
 
 		li {
 			display: inline-block !important;
@@ -106,7 +109,6 @@
 			&.flex-active-slide {
 				border-bottom: 5px solid $primary-color;
 				box-shadow: 1px 2px 4px rgba($black, .4);
-				// transform: scale(1.2);
 				position: relative;
 				z-index: 10;
 
@@ -126,9 +128,4 @@
 			}
 		}
 	}
-
-	// .flex-viewport {
-	// 	overflow: visible !important;
-	// 	overflow-x: hidden;
-	// }
 }

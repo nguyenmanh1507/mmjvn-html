@@ -79,6 +79,26 @@
 	margin: 0;
 }
 
-.copyright span {
-	color: $primary-color;
+.copyright {
+
+	@media only screen and (max-width: 40rem) {
+		text-align: center;
+		margin-bottom: 1.25rem;
+	}
+
+	span {
+		color: $primary-color;
+	}	
+}
+
+.footer-nav {
+	float: none !important;
+	text-align: center;
+
+	> li {
+		display: inline-block;
+		float: none;
+		margin-left: 0;
+		padding: 0 1rem 1rem;
+	}
 }

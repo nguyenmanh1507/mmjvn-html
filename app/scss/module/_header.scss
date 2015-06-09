@@ -14,14 +14,25 @@
 			font-size: 24px;
 			@extend %blue-hover;
 		}
+
+		@media only screen and (max-width: 40rem) {
+			text-align: center;
+			margin-bottom: 10px;
+
+			> li {
+				float: none;
+				display: inline-block;
+			}
+		}
 	}
 }
 
 .lang-and-search {
+	margin-bottom: 10px;
 
 	.search-form {
-		float: left;
-		width: 60%;
+		// float: left;
+		// width: 60%;
 		position: relative;
 		overflow: hidden;
 
@@ -61,6 +72,10 @@
 				font-size: 14px;
 				font-weight: 300;
 			}
+
+			@media only screen and (max-width: 640px) {
+				text-align: center;
+			}
 		}
 
 		button {
@@ -82,27 +97,50 @@
 		}
 	}
 
-	.language-list {
-		padding-top: 7px;
-		margin: 0;
+	// .language-list {
+	// 	padding-top: 7px;
+	// 	margin: 0;
 
-		li {
-			border-right: 1px solid $jet;
-			padding-right: 10px;
-			margin-left: 0;
-			margin-right: 9px;
-			line-height: 1em;
+	// 	li {
+	// 		border-right: 1px solid $jet;
+	// 		padding-right: 10px;
+	// 		margin-left: 0;
+	// 		margin-right: 9px;
+	// 		line-height: 1em;
 
-			&:last-child {
-				margin-right: 0;
-				padding-right: 0;
-				border: none;
-			}
+	// 		&:last-child {
+	// 			margin-right: 0;
+	// 			padding-right: 0;
+	// 			border: none;
+	// 		}
+	// 	}
+
+	// 	a {
+	// 		font-size: 14px;
+	// 		@extend %blue-hover;
+	// 	}
+	// }
+}
+
+// Logo
+.top-bar .name h1 a, 
+.top-bar .name h2 a, 
+.top-bar .name h3 a, 
+.top-bar .name h4 a, 
+.top-bar .name p a, 
+.top-bar .name span a {
+
+	.logo-small {
+		display: none;
+	}
+
+	@media only screen and (max-width: 30rem) {
+		.logo-big {
+			display: none;
 		}
 
-		a {
-			font-size: 14px;
-			@extend %blue-hover;
+		.logo-small {
+			display: inline;
 		}
 	}
 }
@@ -133,22 +171,22 @@
 
 	span::after {
 		box-shadow: 0 0 0 1px $steel, 
-									0 7px 0 1px $steel, 
-									0 14px 0 1px $steel; 
+								0 7px 0 1px $steel, 
+								0 14px 0 1px $steel; 
 	}
 }
 
-@media only screen and (min-width: 63.5rem) {
+// @media only screen and (min-width: $topbar-breakpoint) {
 
-	.top-bar {
-		height: auto;
+// 	.top-bar {
+// 		height: auto;
 
-		.name {
-			height: auto;
-		}
-	}
+// 		.name {
+// 			height: auto;
+// 		}
+// 	}
 
-}
+// }
 
 .top-bar-section ul li > a.button--apply {
 	border-radius: 5px;
@@ -160,14 +198,14 @@
 	@extend %tomato-hover;
 }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: $topbar-breakpoint) {
 	.top-bar-section li:not(.has-form) a:not(.button) {
 		padding: 0 2.06em 0 0;
 	}
 }
 
 
-@media only screen and (max-width: 63.4rem) {
+@media only screen and (max-width: 1169px) {
 	.top-bar-section ul {
 		text-align: center;
 
@@ -187,3 +225,29 @@
 	}
 }
 
+// Dropdown style
+@media only screen and (min-width: $topbar-breakpoint) {
+	.top-bar-section .has-dropdown.hover > .dropdown, 
+	.top-bar-section .has-dropdown.not-click:hover > .dropdown {
+		border: 1px solid $gainsboro;
+	}
+
+	.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+		background-color: $white;
+		color: $jet;
+		line-height: 1.5em;
+		padding: 10px 25px;
+	}
+
+	.top-bar-section .right li .dropdown {
+		right: -64%;
+	}
+
+	.top-bar-section .dropdown li {
+		border-bottom: 1px solid $gainsboro;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}

@@ -8,6 +8,7 @@
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="bower_components/flexslider/flexslider.css">
+    <link rel="stylesheet" href="bower_components/owlcarousel/owl-carousel/owl.carousel.css">
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -20,6 +21,7 @@
     <!-- endbuild -->
   </head>
   <body>
+    
 
     <!-- HEADER
     ================================================== -->
@@ -55,11 +57,11 @@
               </div>
               <!-- /.search-form-wrap -->
 
-              <ul class="language-list inline-list right">
+              <!-- <ul class="language-list inline-list right">
                 <li><a href="#">English</a></li>
                 <li><a href="#">Vietnamese</a></li>
               </ul>
-            </div>
+            </div> -->
             <!-- /.lang-and-search -->
 
           </div>
@@ -77,15 +79,20 @@
             <nav class="top-bar" data-topbar role="navigation">
               <ul class="title-area">
                 <li class="name">
-                  <h1 class="show-for-sr">MMJ Viet Nam</h1>
-                  <a href="#"><img src="images/logo.png" alt="Logo MMJ Viet Nam"></a>
+                  <h1>
+                    <span class="show-for-sr">MMJ Viet Nam</span>
+                    <a href="#">
+                      <img src="images/logo.png" class="logo-big" alt="Logo MMJ Viet Nam">
+                      <img src="images/logo-small.png" class="logo-small" alt="Logo MMJ Viet Nam">
+                    </a>
+                  </h1>
                 </li>
                  <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
               </ul>
             
               <section class="top-bar-section">
-                <h2 class="show-for-sr">Navigation</h2>
+                <h2 class="show-for-sr">Main Navigation</h2>
                 <!-- Right Nav Section -->
                 <ul class="right">
                   <li><a href="#">Home</a></li>
@@ -94,12 +101,14 @@
                   <li class="has-dropdown">
                     <a href="#">News</a>
                     <ul class="dropdown">
-                      <li><a href="#">News 1</a></li>
-                      <li><a href="#">News 2</a></li>
+                      <li><a href="#">Company news</a></li>
+                      <li><a href="#">Recruiment news</a></li>
+                      <li><a href="#">Relay Interviews</a></li>
+                      <li><a href="#">Tech news</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Contact Us</a></li>
-                  <li><a href="#" class="button button--apply">Apply Now</a></li>
+                  <li class="has-form"><a href="#" class="button button--apply">Apply Now</a></li>
                 </ul>
             
               </section>
@@ -121,14 +130,14 @@
     <!-- SLIDESHOW
     ================================================== -->
     
-    <div id="slideshow">
+    <div id="slideshow" class="show-for-medium-up">
       
       <!-- Place somewhere in the <body> of your page -->
       <div id="slider" class="flexslider">
         <ul class="slides">
           <li>
             <div class="slider-item">
-              <img src="images/slider/slide-1.jpg">
+              <img src="images/slider/slide-1.jpg" alt="">
               <div class="slider-item__info">
                 <h3>Welcome to the real learning world</h3>
                 <p>After 20 years working closely with online sellers,<br>we realize that building things to make your life &amp; your business easier has delighted us and brought us so much energy.</p>
@@ -139,7 +148,7 @@
           </li>
           <li>
             <div class="slider-item">
-              <img src="images/slider/slide-1.jpg">
+              <img src="images/slider/slide-1.jpg" alt="">
               <div class="slider-item__info">
                 <h3>Welcome to the real learning world</h3>
                 <p>After 20 years working closely with online sellers,<br>we realize that building things to make your life &amp; your business easier has delighted us and brought us so much energy.</p>
@@ -150,7 +159,7 @@
           </li>
           <li>
             <div class="slider-item">
-              <img src="images/slider/slide-1.jpg">
+              <img src="images/slider/slide-1.jpg" alt="">
               <div class="slider-item__info">
                 <h3>Welcome to the real learning world</h3>
                 <p>After 20 years working closely with online sellers,<br>we realize that building things to make your life &amp; your business easier has delighted us and brought us so much energy.</p>
@@ -161,7 +170,29 @@
           </li>
           <li>
             <div class="slider-item">
-              <img src="images/slider/slide-1.jpg">
+              <img src="images/slider/slide-1.jpg" alt="">
+              <div class="slider-item__info">
+                <h3>Welcome to the real learning world</h3>
+                <p>After 20 years working closely with online sellers,<br>we realize that building things to make your life &amp; your business easier has delighted us and brought us so much energy.</p>
+                <br>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="slider-item">
+              <img src="images/slider/slide-1.jpg" alt="">
+              <div class="slider-item__info">
+                <h3>Welcome to the real learning world</h3>
+                <p>After 20 years working closely with online sellers,<br>we realize that building things to make your life &amp; your business easier has delighted us and brought us so much energy.</p>
+                <br>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="slider-item">
+              <img src="images/slider/slide-1.jpg" alt="">
               <div class="slider-item__info">
                 <h3>Welcome to the real learning world</h3>
                 <p>After 20 years working closely with online sellers,<br>we realize that building things to make your life &amp; your business easier has delighted us and brought us so much energy.</p>
@@ -175,22 +206,22 @@
       <div id="carousel" class="flexslider">
         <ul class="slides">
           <li>
-            <img src="images/slider/slide-1-small.jpg">
+            <img src="images/slider/slide-1-small.jpg" alt="">
           </li>
           <li>
-            <img src="images/slider/slide-2-small.jpg">
+            <img src="images/slider/slide-2-small.jpg" alt="">
           </li>
           <li>
-            <img src="images/slider/slide-3-small.jpg">
+            <img src="images/slider/slide-3-small.jpg" alt="">
           </li>
           <li>
-            <img src="images/slider/slide-4-small.jpg">
+            <img src="images/slider/slide-4-small.jpg" alt="">
           </li>
           <li>
-            <img src="images/slider/slide-5-small.jpg">
+            <img src="images/slider/slide-5-small.jpg" alt="">
           </li>
           <li>
-            <img src="images/slider/slide-6-small.jpg">
+            <img src="images/slider/slide-6-small.jpg" alt="">
           </li>
         </ul>
       </div>
@@ -227,7 +258,7 @@
       <h2 class="show-for-sr">Brief Info</h2>
 
       <div class="row">
-        <div class="medium-4 columns">
+        <div class="medium-12 large-4 columns">
           
           <div class="activity">
       
@@ -262,7 +293,7 @@
           <!-- /.activity -->
       
         </div>
-        <div class="medium-8 columns">
+        <div class="medium-12 large-8 columns">
           
           <div class="company-info">
             
@@ -363,53 +394,7 @@
       <h2 class="show-for-sr">Recent News</h2>
       
       <div class="row">
-        <div class="small-12 medium-8 columns">
-          <div id="news-recent-slider">
-
-            <div class="row">
-              <div class="small-12 medium-6 columns">
-
-                <article class="news">
-                  <a href="#"><img src="images/news/news-1.jpg" alt="news"></a>
-                  <div class="news-content">
-                    <header>
-                      <h2 class="news-content__title"><a href="#">[Company Trip] Danang - Where the love story begin</a></h2>
-                      <div class="news-content__meta">
-                        by <a href="#">Admin</a> | <time datetime="2015-06-25">25 Jun, 2015</time>
-                      </div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas in commodi minima iusto. Consequatur quas facilis saepe praesentium, fugit corrupti cumque, quo.</p>
-                    </header>
-                  </div>
-                  <!-- /.news-content -->
-                </article>
-                <!-- /.news -->
-              
-              </div>
-              <div class="small-12 medium-6 columns">
-
-                <article class="news">
-                  <a href="#"><img src="images/news/news-2.jpg" alt="news"></a>
-                  <div class="news-content">
-                    <header>
-                      <h2 class="news-content__title"><a href="#">Mr.Tasaki - Welcome to the real learning world</a></h2>
-                      <div class="news-content__meta">
-                        by <a href="#">Admin</a> | <time datetime="2015-06-25">25 Jun, 2015</time>
-                      </div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas in commodi minima iusto. Consequatur quas facilis saepe praesentium, fugit corrupti cumque, quo.</p>
-                    </header>
-                  </div>
-                  <!-- /.news-content -->
-                </article>
-                <!-- /.news -->
-
-              </div>
-            </div>
-            <!-- /.row -->
-
-          </div>
-          <!-- /#news-recent-slider -->
-        </div>
-        <div class="small-12 medium-4 columns">
+        <div class="small-12 medium-4 medium-push-8 columns">
           
           <div class="recent-news-description">
             <h3>Recent News</h3>
@@ -417,7 +402,85 @@
             <a href="#">View more</a>
           </div>
           <!-- /.recent-news-description -->
+          <div class="recent-news-navigation">
+            <a href="#" class="rnn-prev"><i class="fa fa-angle-left"></i></a>
+            <a href="#" class="rnn-next"><i class="fa fa-angle-right"></i></a>
+          </div>
 
+        </div>
+        <div class="small-12 medium-8 medium-pull-4 columns">
+          <div id="news-recent-slider" class="owl-carousel owl-theme">
+                
+            <div class="item">
+              <article class="news">
+                <a href="#"><img src="images/news/news-1.jpg" alt="news"></a>
+                <div class="news-content">
+                  <header>
+                    <h2 class="news-content__title"><a href="#">[Company Trip] Danang - Where the love story begin</a></h2>
+                    <div class="news-content__meta">
+                      by <a href="#">Admin</a> | <time datetime="2015-06-25">25 Jun, 2015</time>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas in commodi minima iusto. Consequatur quas facilis saepe praesentium, fugit corrupti cumque, quo.</p>
+                  </header>
+                </div>
+                <!-- /.news-content -->
+              </article>
+              <!-- /.news -->
+            </div>
+            
+            <div class="item">
+              <article class="news">
+                <a href="#"><img src="images/news/news-2.jpg" alt="news"></a>
+                <div class="news-content">
+                  <header>
+                    <h2 class="news-content__title"><a href="#">Mr.Tasaki - Welcome to the real learning world</a></h2>
+                    <div class="news-content__meta">
+                      by <a href="#">Admin</a> | <time datetime="2015-06-25">25 Jun, 2015</time>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas in commodi minima iusto. Consequatur quas facilis saepe praesentium, fugit corrupti cumque, quo.</p>
+                  </header>
+                </div>
+                <!-- /.news-content -->
+              </article>
+              <!-- /.news -->
+            </div>
+
+            <div class="item">
+              <article class="news">
+                <a href="#"><img src="images/news/news-2.jpg" alt="news"></a>
+                <div class="news-content">
+                  <header>
+                    <h2 class="news-content__title"><a href="#">Mr.Tasaki - Welcome to the real learning world</a></h2>
+                    <div class="news-content__meta">
+                      by <a href="#">Admin</a> | <time datetime="2015-06-25">25 Jun, 2015</time>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas in commodi minima iusto. Consequatur quas facilis saepe praesentium, fugit corrupti cumque, quo.</p>
+                  </header>
+                </div>
+                <!-- /.news-content -->
+              </article>
+              <!-- /.news -->
+            </div>
+
+            <div class="item">
+              <article class="news">
+                <a href="#"><img src="images/news/news-2.jpg" alt="news"></a>
+                <div class="news-content">
+                  <header>
+                    <h2 class="news-content__title"><a href="#">Mr.Tasaki - Welcome to the real learning world</a></h2>
+                    <div class="news-content__meta">
+                      by <a href="#">Admin</a> | <time datetime="2015-06-25">25 Jun, 2015</time>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas in commodi minima iusto. Consequatur quas facilis saepe praesentium, fugit corrupti cumque, quo.</p>
+                  </header>
+                </div>
+                <!-- /.news-content -->
+              </article>
+              <!-- /.news -->
+            </div>
+
+          </div>
+          <!-- /#news-recent-slider -->
         </div>
       </div>
       <!-- /.row -->
@@ -474,16 +537,16 @@
               <li> 
                 <div class="quote-content">
                   <div class="row">
-                    <div class="small-12 medium-4 columns">
-                      <div class="quote-img">
-                        <img src="images/quote/quote-1.jpg" alt="quote">
-                      </div>
-                    </div>
-                    <div class="small-12 medium-8 columns">
+                    <div class="small-12 medium-8 medium-push-4 columns">
                       <blockquote>
                         <cite>Yasuyuki Tasaki - President</cite>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc risus, ac vehicula turpis. Duis fringilla fringilla lorem.</p>
                       </blockquote>
+                    </div>
+                    <div class="small-12 medium-4 medium-pull-8 columns text-center">
+                      <div class="quote-img">
+                        <img src="images/quote/quote-1.jpg" alt="quote">
+                      </div>
                     </div>
                   </div>
                   <!-- /.row -->
@@ -493,16 +556,16 @@
               <li> 
                 <div class="quote-content">
                   <div class="row">
-                    <div class="small-12 medium-4 columns">
-                      <div class="quote-img">
-                        <img src="images/quote/quote-1.jpg" alt="quote">
-                      </div>
-                    </div>
-                    <div class="small-12 medium-8 columns">
+                    <div class="small-12 medium-8 medium-push-4 columns">
                       <blockquote>
                         <cite>Yasuyuki Tasaki - President</cite>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc risus, ac vehicula turpis. Duis fringilla fringilla lorem.</p>
                       </blockquote>
+                    </div>
+                    <div class="small-12 medium-4 medium-pull-8 columns text-center">
+                      <div class="quote-img">
+                        <img src="images/quote/quote-1.jpg" alt="quote">
+                      </div>
                     </div>
                   </div>
                   <!-- /.row -->
@@ -512,16 +575,16 @@
               <li> 
                 <div class="quote-content">
                   <div class="row">
-                    <div class="small-12 medium-4 columns">
-                      <div class="quote-img">
-                        <img src="images/quote/quote-1.jpg" alt="quote">
-                      </div>
-                    </div>
-                    <div class="small-12 medium-8 columns">
+                    <div class="small-12 medium-8 medium-push-4 columns">
                       <blockquote>
                         <cite>Yasuyuki Tasaki - President</cite>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc risus, ac vehicula turpis. Duis fringilla fringilla lorem.</p>
                       </blockquote>
+                    </div>
+                    <div class="small-12 medium-4 medium-pull-8 columns text-center">
+                      <div class="quote-img">
+                        <img src="images/quote/quote-1.jpg" alt="quote">
+                      </div>
                     </div>
                   </div>
                   <!-- /.row -->
@@ -548,7 +611,7 @@
     
     <footer id="footer">
       <div class="row">
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-6 large-3 columns">
           
           <div class="widget-footer" id="widget-footer-1">
             
@@ -560,7 +623,7 @@
           <!-- /.widget-1 -->
 
         </div>
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-6 large-3 columns">
           
           <div class="widget-footer" id="widget-footer-2">
             
@@ -579,7 +642,7 @@
           <!-- /.widget-2 -->
 
         </div>
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-6 large-3 columns">
           
           <div class="widget-footer" id="widget-footer-3">
             
@@ -597,7 +660,7 @@
           <!-- /.widget-3 -->
 
         </div>
-        <div class="small-12 medium-3 columns">
+        <div class="small-12 medium-6 large-3 columns">
           
           <div class="widget-footer" id="widget-footer-4">
             
@@ -664,6 +727,7 @@
     <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
     <script src="bower_components/flexslider/jquery.flexslider.js"></script>
+    <script src="bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>
