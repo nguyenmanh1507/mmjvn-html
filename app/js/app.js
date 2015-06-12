@@ -20,11 +20,29 @@ var app = (function(document, $) {
 				searchForm.addClass('is-visible');
 			});
 
+			// Simple sticky menu
+			var menu = $('.site-navigation');
+			var menuOffset = menu.offset().top;
+			var menuHeight = menu.height();
+			var header = $('#site-header');
+
+			$(window).scroll(function() {
+				var windowOffset = $(this).scrollTop();
+
+				if(windowOffset >= menuOffset) {
+					menu.addClass('sticky-menu');
+					header.css('margin-bottom', menuHeight + 20);
+				} else {
+					menu.removeClass('sticky-menu');
+					header.css('margin-bottom', 0);
+				}
+
+			});
+
 			// Slider
 			$('#carousel').flexslider({
 		    animation: 'slide',
 		    controlNav: false,
-		    animationLoop: false,
 		    slideshowSpeed: 10000,
 		    itemWidth: 222,
 		    itemMargin: 5,
@@ -35,8 +53,6 @@ var app = (function(document, $) {
 		 	// Carousel
 		  $('#slider').flexslider({
 		    animation: 'slide',
-		    controlNav: false,
-		    animationLoop: false,
 		    nextText: '',
 		    prevText: '',
 		    slideshowSpeed: 10000,
@@ -70,21 +86,6 @@ var app = (function(document, $) {
 		  $('#quote-slider').flexslider({
 		  	animation: 'slide',
 		  	slideshow: false
-		  });
-
-		  // Change icon when click accordion
-
-		  $('.accordion').on('toggled', function(event, accordion) {
-		    console.log(accordion);
-		    var iconMinus = accordion.prev().children('.fa');
-		    var iconPlus = accordion.closest('.accordion').find('a').children('.fa');
-
-		    console.log(event);
-
-		    console.log(iconPlus);
-		    iconPlus.removeClass('fa-minus-circle').addClass('fa-plus-circle');
-		    iconMinus.removeClass('fa-plus-circle').addClass('fa-minus-circle');
-
 		  });
 
 		};

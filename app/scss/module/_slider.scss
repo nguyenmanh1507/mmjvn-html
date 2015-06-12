@@ -12,6 +12,12 @@
 #slider {
 	overflow: hidden;
 
+	@media only screen and (max-width: 61.25rem) {
+		.flex-viewport {
+			padding-bottom: 40px;
+		}
+	}
+
 	&:hover .slider-item .slider-item__info {
 		transform: translateY(0);
 	}
@@ -48,6 +54,18 @@
 
 	.flex-direction-nav a.flex-next:before {
 		content: '\f105';
+	}
+
+	.flex-control-paging li a.flex-active {
+		background-color: $primary-color;
+	}
+
+	.flex-control-nav {
+		@media only screen and (min-width: 61.3125rem) {
+			display: none;
+		}
+
+		bottom: -8px;
 	}
 
 	.slider-item {
@@ -87,12 +105,34 @@
 				
 				@extend %button-border-hover;
 			}
+
+			@media only screen and (max-width: 61.25rem) {
+				h3 {
+					font-size: 1.25rem;
+				}
+
+				a {
+					font-size: 0.8125rem;
+				}
+			}
+
+			@media only screen and (max-width: 80rem) {
+				transform: translateY(0);
+
+				p {
+					display: none;
+				}
+			}
 		}
 	}
 }
 
 // Carousel
 #carousel {
+
+	@media only screen and (max-width: 61.25rem) {
+		display: none;
+	}
 
 	.slides {
 
