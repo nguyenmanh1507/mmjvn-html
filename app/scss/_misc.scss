@@ -47,6 +47,14 @@
 	margin: 0;
 }
 
+// Placeholder function
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};
+}
+
 // Clearfix
 .clearfix:after {
   content:"";
@@ -62,6 +70,10 @@
 	}
 }
 
+.padding-big {
+	padding: 5.25em 0 2.5em;
+}
+
 // Plygon BG
 .polygon-bg {
 	background-color: $smoke;
@@ -73,10 +85,60 @@
 	background-position: left top, right top, right bottom, left bottom;
 }
 
-// Placeholder function
-@mixin placeholder {
-	&::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}  
+
+// Breadcrumb
+.breadcrumb {
+	background-color: $iron2;
+	border-top: 1px solid $white;
+	border-bottom: 1px solid $white;
+
+	.bc {
+		margin: 0;
+
+		.bc__item {
+			color: $steel;
+			display: inline-block;
+			font-size: 1.5rem;
+			padding: 0.92em 0;
+
+			&:after {
+				font-family: 'FontAwesome';
+				content: '\f0da';
+				padding: 0 10px;
+			}
+
+			&:last-child:after {
+				visibility: hidden;
+			}
+
+			a {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+// Pagination
+.paginate {
+	text-align: center;
+	margin-top: 1.88em;
+
+	> span,
+	> a {
+		background-color: $white;
+		display: inline-block;
+		padding: 5px 10px;
+		color: $jet;
+		transition: all .3s ease-in;
+
+		&.current {
+			background-color: $jet;
+			color: $white;
+		}
+
+		&:hover {
+			background-color: $primary-color;
+			color: $white;
+		}
+	}
 }

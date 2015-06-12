@@ -1,0 +1,98 @@
+.sidebar {
+
+	.widget-title {
+		color: $steel;
+		font-size: 1.5rem;
+	}
+}
+
+.widget-sidebar {
+	margin-bottom: 30px;
+
+	.widget-sidebar__cats {
+
+		ul {
+			margin: 0;
+
+			li {
+				margin-bottom: 0.5em;
+			}
+
+			a {
+				color: $jet;
+				display: inline-block;
+				transition: color .3s ease-in;
+
+				&:before {
+					content: '\2013';
+					margin-right: 10px;
+				}
+
+				&:hover,
+				&:focus {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+	.sidebar-newsletter {
+
+		input[type="email"] {
+			@include placeholder {
+				font-size: 0.875rem;
+				font-style: italic;
+			}
+		}
+
+		button[type="submit"] {
+			@extend %button-border-black;
+			@extend %button-border-hover;
+		}
+	}
+
+	.widget-sidebar__tags {
+
+		.inline-list > li {
+			margin: 0 5px 5px 0;
+
+			a {
+				background-color: $white;
+				color: $jet;
+				display: inline-block;
+				font-size: 0.875rem;
+				padding: 0.36em 1.07em;
+				transition: all .3s ease-in;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.widget-sidebar__socials {
+
+		.inline-list > li {
+			margin: 0 10px 10px 0;
+
+			a {
+				background-color: $white;
+				color: $jet;
+				display: inline-block;
+				font-size: 23px;
+				height: 34px;
+				width: 35px;
+				text-align: center;
+				line-height: 34px;
+				transition: all .3s ease-in;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $white;
+				}
+			}
+		}
+	}
+}
