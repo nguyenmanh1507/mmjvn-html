@@ -38,12 +38,34 @@
 	.blog-post__content {
 		margin-left: 100px;
 
+		&--single {
+			margin-left: 0;
+		}
+
 		.blog-post-title {
+			color: $steel;
 			margin: 0 0 0.74em;
+
+			&--single {
+				margin-bottom: 0;
+			}
 
 			a {
 				color: $steel;
 				font-size: 1.5rem;
+				transition: color .3s ease-in;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.blog-info {
+			color: $jet;
+
+			a {
+				color: $jet;
 				transition: color .3s ease-in;
 
 				&:hover {
@@ -75,6 +97,17 @@
 						&:hover {
 							color: $primary-color;
 						}
+					}
+				}
+			}
+
+			&--footer-tags {
+
+				ul li {
+
+					&:first-child {
+						color: $primary-color;
+						margin-right: 3%;
 					}
 				}
 			}

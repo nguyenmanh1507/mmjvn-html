@@ -47,6 +47,15 @@
 	margin: 0;
 }
 
+%link-hover-blue {
+	transition: all .3s ease-in;
+
+	&:hover,
+	&:focus {
+		color: $primary-color;
+	}
+}
+
 // Placeholder function
 @mixin placeholder {
 	&::-webkit-input-placeholder {@content};
