@@ -73,7 +73,7 @@
 				font-weight: 300;
 			}
 
-			@media only screen and (max-width: 640px) {
+			@media only screen and (max-width: 40rem) {
 				text-align: center;
 			}
 		}
@@ -198,14 +198,38 @@
 	@extend %tomato-hover;
 }
 
+.top-bar-section .has-dropdown > a:after {
+	border-color: transparent transparent transparent $jet;
+}
+
+// Sticky menu
+.sticky-menu {
+	background-color: $white;
+	background-color: rgba($white, .9);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	position: fixed;	
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
 @media only screen and (min-width: $topbar-breakpoint) {
 	.top-bar-section li:not(.has-form) a:not(.button) {
 		padding: 0 2.06em 0 0;
 	}
+
+	.top-bar-section .has-dropdown > a:after {
+		border-color: $jet transparent transparent transparent;
+	}
+
+	.top-bar-section .has-form {
+		padding-right: 0;
+	}
 }
 
 
-@media only screen and (max-width: 1169px) {
+@media only screen and (max-width: 73.0625rem) {
 	.top-bar-section ul {
 		text-align: center;
 

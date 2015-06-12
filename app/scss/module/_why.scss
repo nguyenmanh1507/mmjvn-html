@@ -34,34 +34,43 @@
 		margin-bottom: 1.25em;
 	}
 
-	.accordion .accordion-navigation > a, 
-	.accordion dd > a {
-		padding: 15px 0;
-		line-height: 1em;
-		border-bottom: 1px solid $iron;
-		color: $tuatara;
-		transition: color .3s ease-in;
+	.accordion .accordion-navigation, 
+	.accordion dd {
 
-		&:hover {
-			color: $primary-color;
+		> a {
+			padding: 15px 0;
+			line-height: 1em;
+			border-bottom: 1px solid $iron;
+			color: $tuatara;
+			transition: color .3s ease-in;
 
-			i.fa {
-				color: $tuatara;
+			&:hover {
+				color: $primary-color;
+
+				&:after {
+					color: $tuatara;
+				}
+			}
+
+			&:after {
+				font-family: 'FontAwesome';
+				content: '\f055';
+				color: $primary-color;
+				float: right;
+				height: 14px;
+				width: 14px;
+				transition: color .3s ease-in;
 			}
 		}
 
-		i.fa {
-			color: $primary-color;
-			display: block;
-			float: right;
-			transition: color .3s ease-in;
+		> .content {
+			font-style: italic;
+			padding: 0.31em 0 0.31em 1.25em;
 		}
-	}
 
-	.accordion .accordion-navigation > .content, 
-	.accordion dd > .content {
-		font-style: italic;
-		padding: 0.31em 0 0.31em 1.25em;
+		&.active > a:after {
+				content: '\f056';
+		}
 	}
 }
 
