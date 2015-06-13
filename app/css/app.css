@@ -3409,15 +3409,9 @@ a:focus, a:hover {
     background-color: tomato;
     color: #FFFFFF; }
 
-<<<<<<< HEAD
-#slider .slider-item .slider-item__info a, .infographic a.button--black, .form-newsletter [type='submit'] {
-  transition: all .3s ease-in; }
-  #slider .slider-item .slider-item__info a:hover, .infographic a.button--black:hover, .form-newsletter [type='submit']:hover {
-=======
 #slider .slider-item .slider-item__info a, .infographic a.button--black, .form-newsletter [type='submit'], .widget-sidebar .sidebar-newsletter button[type="submit"] {
   transition: all .3s ease-in; }
   #slider .slider-item .slider-item__info a:hover, .infographic a.button--black:hover, .form-newsletter [type='submit']:hover, .widget-sidebar .sidebar-newsletter button[type="submit"]:hover {
->>>>>>> origin/master
     border-color: #24b3cb;
     color: #24b3cb; }
 
