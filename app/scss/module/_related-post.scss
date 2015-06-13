@@ -16,11 +16,12 @@
 }
 
 .related-post-nav {
-	float: right;
+	text-align: right;
 
 	a {
 		font-size: 24px;
 		color: $jet;
+		margin-left: 15px;
 
 		@extend %link-hover-blue;
 	}
@@ -61,7 +62,6 @@
 		}
 
 		img {
-			display: block;
 			width: 100%;
 		}
 	}
