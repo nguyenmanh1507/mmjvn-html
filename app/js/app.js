@@ -110,6 +110,12 @@ var app = (function(document, $) {
 		  	slideshow: false
 		  });
 
+		  // About Us Slider
+		  $('.about-us__slider').flexslider({
+		  	animation: 'slide',
+		  	controlNav: false
+		  });
+
 		};
 	return {
 		init: _init
