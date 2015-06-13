@@ -1,0 +1,110 @@
+.about-us {
+	padding: 6.25em 0;
+
+	.about-us__intro {
+		
+		h1,
+		h2,
+		h3,
+		h4 {
+			font-size: 2.25rem;
+			color: $steel;
+			text-align: center;	
+		}
+	}
+
+	.about-us__slider {
+
+		&:hover .flex-direction-nav .flex-prev {
+			opacity: 1;
+		}
+
+		&:hover .flex-direction-nav .flex-next {
+			opacity: 1;
+		}
+
+		.flex-direction-nav a {
+			opacity: 1;
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+			background-color: $jet;
+			text-align: center;
+			line-height: 30px;
+
+			&:before {
+				color: $white;
+				font-size: 18px;
+			}
+
+			&:hover {
+				background-color: $primary-color;
+			}
+		}
+
+		.flex-direction-nav .flex-next {
+			right: 5%;
+		}
+
+		.flex-direction-nav .flex-prev {
+			left: 5%;
+		}
+	}
+}
+
+.member {
+	margin: 0;
+	width: 50%;
+
+	.member__avatar {
+		height: 150px;
+		width: 150px;
+		float: left;
+		text-align: center;
+		position: relative;
+
+		img {
+			border-radius: 50%;
+			border: 10px solid $jet;
+			width: 100%;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -11px;
+			margin-top: -10px;
+			height: 0;
+			width: 0;
+	    border-top: 10px solid transparent; 
+	    border-right: 20px solid $jet; 
+	    border-bottom: 10px solid transparent; 
+		}
+	}
+
+	figcaption {
+		margin-left: 168px;
+
+		.button {
+			font-size: 0.875rem;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 10px 20px;
+
+			@extend %tomato-hover;
+		}
+	}
+
+	.member__name {
+		color: $steel;
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	.member__role {
+		font-style: italic;
+		font-size: 0.875rem;
+		line-height: 1em;
+	}
+}
