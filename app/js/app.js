@@ -81,6 +81,28 @@ var app = (function(document, $) {
 		  	return false;
 		  });
 
+		  // Related post Slider
+		  var rpSlider = $('#related-post-slider');
+		  rpSlider.owlCarousel({
+		  	autoPlay: 10000,
+		  	items: 3,
+		  	itemsDesktop: [1024, 3],
+		  	itemsDesktopSmall : [900, 2],
+		  	itemsTablet: [640, 1],
+		  	itemsMobile: false
+		  });
+
+		  // custom navigation events
+		  $('.rp-prev').click(function() {
+		  	rpSlider.trigger('owl.prev');
+		  	return false;
+		  });
+
+		  $('.rp-next').click(function() {
+		  	rpSlider.trigger('owl.next');
+		  	return false;
+		  });
+
 
 		  // Quote slider
 		  $('#quote-slider').flexslider({
