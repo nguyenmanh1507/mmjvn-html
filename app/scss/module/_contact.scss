@@ -1,0 +1,96 @@
+.address-list {
+
+	li {
+		background-color: $smoke;
+		background-image: url(../images/polygon-4.png), url(../images/polygon-2.png);
+		background-repeat: no-repeat, no-repeat;
+		background-position: -162px 240px, right top;
+		padding: 3.13em 0;
+
+		&:nth-child(even) {
+			background: none;
+
+			.branch-address__name {
+				background-color: $smoke;
+				border-radius: 5px;
+			}
+
+			.branch-address__detail .social {
+				background-color: $jet;
+				color: $white;
+				transition: all .3s ease-in;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $white;
+				}
+			}
+
+			@media only screen and (min-width: 40.063em) {
+				.columns:first-child {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+.branch-address {
+	color: $steel;
+	padding: 0 15px;
+
+	.branch-address__name,
+	.branch-address__detail {
+		font-style: italic;
+	}
+
+	.branch-address__name {
+		color: $steel;
+		font-size: 2.25rem;
+		text-align: center;
+		margin: 0 0 .5em;
+	}
+
+	.branch-address__detail {
+		font-weight: 300;
+		font-size: 1.125rem;
+
+		span {
+			display: inline-block;
+			font-size: 1.5rem;
+			width: 24%;
+			text-align: right;
+			margin-right: 7%;
+		}
+
+		a {
+			color: $steel;
+			transition: color .3s ease-in;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+
+		.social {
+			background-color: $white;
+			display: inline-block;
+			padding: 5px 0;
+			margin-right: 3%;
+			width: 36px;
+			text-align: center;
+			transition: all .3s ease-in;
+
+			&:hover {
+				background-color: $primary-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+#branch-map-1 {
+	background-color: $jet;
+	height: 300px;
+	width: 100%;
+}

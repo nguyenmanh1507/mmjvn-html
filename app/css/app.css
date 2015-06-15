@@ -3817,11 +3817,11 @@ a:focus, a:hover {
       display: flex; } }
   .company-info .tabs dd, .company-info .tabs .tab-title {
     border-bottom: 1px solid #c8d9df;
-    border-right: 1px solid #c8d9df;
     text-align: center;
     float: none; }
     @media only screen and (min-width: 40.0625rem) {
       .company-info .tabs dd, .company-info .tabs .tab-title {
+        border-right: 1px solid #c8d9df;
         -webkit-box-flex: 1;
         -webkit-flex: 1;
             -ms-flex: 1;
@@ -4617,3 +4617,69 @@ a:focus, a:hover {
     margin: 0 auto 20px;
     -webkit-transition: all .3s ease-in;
             transition: all .3s ease-in; }
+
+.address-list li {
+  background-color: #eff5f7;
+  background-image: url(../images/polygon-4.png), url(../images/polygon-2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -162px 240px, right top;
+  padding: 3.13em 0; }
+  .address-list li:nth-child(even) {
+    background: none; }
+    .address-list li:nth-child(even) .branch-address__name {
+      background-color: #eff5f7;
+      border-radius: 5px; }
+    .address-list li:nth-child(even) .branch-address__detail .social {
+      background-color: #9aa7af;
+      color: #FFFFFF;
+      -webkit-transition: all .3s ease-in;
+              transition: all .3s ease-in; }
+      .address-list li:nth-child(even) .branch-address__detail .social:hover {
+        background-color: #24b3cb;
+        color: #FFFFFF; }
+    @media only screen and (min-width: 40.063em) {
+      .address-list li:nth-child(even) .columns:first-child {
+        float: right; } }
+
+.branch-address {
+  color: #2f383d;
+  padding: 0 15px; }
+  .branch-address .branch-address__name, .branch-address .branch-address__detail {
+    font-style: italic; }
+  .branch-address .branch-address__name {
+    color: #2f383d;
+    font-size: 2.25rem;
+    text-align: center;
+    margin: 0 0 .5em; }
+  .branch-address .branch-address__detail {
+    font-weight: 300;
+    font-size: 1.125rem; }
+    .branch-address .branch-address__detail span {
+      display: inline-block;
+      font-size: 1.5rem;
+      width: 24%;
+      text-align: right;
+      margin-right: 7%; }
+    .branch-address .branch-address__detail a {
+      color: #2f383d;
+      -webkit-transition: color .3s ease-in;
+              transition: color .3s ease-in; }
+      .branch-address .branch-address__detail a:hover {
+        color: #24b3cb; }
+    .branch-address .branch-address__detail .social {
+      background-color: #FFFFFF;
+      display: inline-block;
+      padding: 5px 0;
+      margin-right: 3%;
+      width: 36px;
+      text-align: center;
+      -webkit-transition: all .3s ease-in;
+              transition: all .3s ease-in; }
+      .branch-address .branch-address__detail .social:hover {
+        background-color: #24b3cb;
+        color: #FFFFFF; }
+
+#branch-map-1 {
+  background-color: #9aa7af;
+  height: 300px;
+  width: 100%; }
