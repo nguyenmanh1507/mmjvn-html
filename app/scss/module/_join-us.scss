@@ -79,9 +79,4 @@
 			padding-top: 2.5em;
 		}
 	}
-
-	a.button--black {
-		@extend %button-border-black;
-		@extend %button-border-hover;
-	}
 }

@@ -32,6 +32,7 @@
 	transition: all .3s ease-in;
 
 	&:hover {
+		background-color: transparent;
 		border-color: $primary-color;
 		color: $primary-color;
 	}
@@ -62,6 +63,11 @@
   &:-moz-placeholder           {@content};
   &::-moz-placeholder          {@content};
   &:-ms-input-placeholder      {@content};
+}
+
+.button--black {
+	@extend %button-border-black;
+	@extend %button-border-hover;
 }
 
 // Clearfix
