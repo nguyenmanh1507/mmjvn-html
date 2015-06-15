@@ -4533,3 +4533,52 @@ a:focus, a:hover {
   @media only screen and (max-width: 43.75rem) {
     .timeline-column {
       left: 3%; } }
+
+.recruitment h1, .recruitment h2, .recruitment h3, .recruitment h4 {
+  color: #2f383d;
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin: 0 0 0.56em; }
+
+.position-list {
+  list-style: none;
+  text-align: center;
+  margin-top: 3.75em; }
+  .position-list li {
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 30px; }
+
+.position {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 5px solid #cccccc;
+  text-align: center;
+  width: 219px;
+  padding: 0.94em;
+  margin: 0 auto; }
+  .position.is-available {
+    border-color: #24b3cb; }
+    .position.is-available .position__name {
+      color: #24b3cb; }
+    .position.is-available .position__status {
+      background-color: #24b3cb;
+      box-shadow: 0 0 8px rgba(36, 179, 203, 0.5); }
+    .position.is-available .button--black {
+      border-color: #24b3cb;
+      color: #24b3cb; }
+  .position .position__name {
+    font-size: 1.875rem;
+    font-weight: 300;
+    line-height: 1em;
+    height: 68px;
+    margin-bottom: 10px; }
+  .position .position__status {
+    background-color: #cdd6da;
+    border: 6px solid #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    height: 24px;
+    width: 24px;
+    margin: 0 auto 20px;
+    transition: all .3s ease-in; }

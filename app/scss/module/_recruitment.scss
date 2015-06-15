@@ -1,0 +1,71 @@
+.recruitment {
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $steel;
+		font-size: 2.25rem;
+		font-weight: 300;
+		margin: 0 0 0.56em;
+	}
+}
+
+.position-list {
+	list-style: none;
+	text-align: center;
+	margin-top: 3.75em;
+
+	li {
+		display: inline-block;
+		padding: 0 15px;
+		margin-bottom: 30px;
+	}
+}
+
+.position {
+	background-color: $white;
+	border-radius: 5px;
+	border: 5px solid $iron2;
+	text-align: center;
+	width: 219px;
+	padding: 0.94em;
+	margin: 0 auto;
+
+	&.is-available {
+		border-color: $primary-color;
+
+		.position__name {
+			color: $primary-color;
+		}
+
+		.position__status {
+			background-color: $primary-color;
+			box-shadow: 0 0 8px rgba($primary-color, .5);
+		}
+
+		.button--black {
+			border-color: $primary-color;
+			color: $primary-color;
+		}
+	}
+
+	.position__name {
+		font-size: 1.875rem;
+		font-weight: 300;
+		line-height: 1em;
+		height: 68px;
+		margin-bottom: 10px;
+	}
+
+	.position__status {
+		background-color: $iron3;
+	  border: 6px solid $white;
+	  border-radius: 50%;
+	  box-shadow: 0 0 8px rgba($black, .5);
+	  height: 24px;
+	  width: 24px;
+	  margin: 0 auto 20px;
+	 	transition: all .3s ease-in;
+	}
+}
