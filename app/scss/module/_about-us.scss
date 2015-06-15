@@ -76,6 +76,10 @@
 	.timeline__item {
 		position: relative;
 
+		@media only screen and (max-width: 43.75rem) {
+			margin-bottom: 50px;
+		}
+
 		&:hover {
 
 			&:before {
@@ -106,6 +110,10 @@
 		  margin-left: -12px;
 		  z-index: 10;
 		 	transition: all .3s ease-in;
+
+		 	@media only screen and (max-width: 43.75rem) {
+				left: 3%;
+			}
 		}
 
 		&:nth-child(odd) {
@@ -113,6 +121,25 @@
 			.member {
 				text-align: left;
 				float: right;
+
+				@media only screen and (max-width: 43.75rem) {
+					float: none;
+					width: auto;
+					margin-left: 9%;
+				}
+
+				@media only screen and (max-width: 30rem) {
+
+					.member__avatar {
+						margin: 0 3% 1% 0;
+					}
+
+					figcaption {
+						padding-right: 3%;
+						margin-left: 0;
+					}
+
+				}
 			}
 		}
 
@@ -133,6 +160,38 @@
 
 				figcaption {
 					margin: 0 168px 0 0;
+				}
+
+				@media only screen and (max-width: 43.75rem) {
+					margin-left: 9%;
+					text-align: left;
+					width: auto;
+
+					.member__avatar {
+						float: left;
+
+						&:before {
+							left: -22px;
+							transform: none;
+						}
+					}
+
+					figcaption {
+						margin: 0 0 0 168px;
+					}
+				}
+
+				@media only screen and (max-width: 30rem) {
+
+					.member__avatar {
+						margin: 0 3% 1% 0;
+					}
+
+					figcaption {
+						padding-right: 3%;
+						margin-left: 0;
+					}
+					
 				}
 			}
 		}
@@ -226,4 +285,8 @@
 	top: 0;
 	left: 50%;
 	margin-left: -5px;
+
+	@media only screen and (max-width: 43.75rem) {
+		left: 3%;
+	}
 }
