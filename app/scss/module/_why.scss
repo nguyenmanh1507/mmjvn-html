@@ -86,11 +86,11 @@
 	.tabs dd, 
 	.tabs .tab-title {
 		border-bottom: 1px solid $iron;
-		border-right: 1px solid $iron;
 		text-align: center;
 		float: none;
 
 		@media only screen and (min-width: 40.0625rem) {
+			border-right: 1px solid $iron;
 			flex: 1;
 		}
 
