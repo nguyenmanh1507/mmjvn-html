@@ -1,0 +1,292 @@
+.about-us {
+	padding: 6.25em 0;
+
+	.about-us__intro {
+		
+		h1,
+		h2,
+		h3,
+		h4 {
+			font-size: 2.25rem;
+			color: $steel;
+			text-align: center;	
+		}
+	}
+
+	.about-us__slider {
+
+		&:hover .flex-direction-nav .flex-prev {
+			opacity: 1;
+		}
+
+		&:hover .flex-direction-nav .flex-next {
+			opacity: 1;
+		}
+
+		.flex-direction-nav a {
+			opacity: 1;
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+			background-color: $jet;
+			text-align: center;
+			line-height: 30px;
+
+			&:before {
+				color: $white;
+				font-size: 18px;
+			}
+
+			&:hover {
+				background-color: $primary-color;
+			}
+		}
+
+		.flex-direction-nav .flex-next {
+			right: 5%;
+		}
+
+		.flex-direction-nav .flex-prev {
+			left: 5%;
+		}
+	}
+}
+
+.ourteam {
+	text-align: center;
+
+	& > h1,
+	& > h2, 
+	& > h3, 
+	& > h4 {
+		color: $steel;
+		font-size: 2.25rem;
+		font-weight: 300;
+		margin: 0 0 2.08em;
+	}
+
+	.button--black {
+		margin-top: 3.13em;
+		text-align: center;
+	}
+}
+
+.timeline {
+
+	.timeline__item {
+		position: relative;
+
+		@media only screen and (max-width: 43.75rem) {
+			margin-bottom: 50px;
+		}
+
+		&:hover {
+
+			&:before {
+				background-color: $primary-color;
+				box-shadow: 0 0 9px rgba($black, .7);
+			}
+
+			.member .member__avatar {
+				border-color: $primary-color;
+				
+				&:before {
+					border-right-color: $primary-color;
+				}
+			}
+		}
+
+		&:before {
+		  background-color: $iron3;
+		  border: 6px solid $white;
+		  border-radius: 50%;
+		  box-shadow: 0 0 8px rgba($black, .5);
+			content: '';
+		  height: 24px;
+		  width: 24px;
+		  position: absolute;
+		  top: 62px;
+		  left: 50%;
+		  margin-left: -12px;
+		  z-index: 10;
+		 	transition: all .3s ease-in;
+
+		 	@media only screen and (max-width: 43.75rem) {
+				left: 3%;
+			}
+		}
+
+		&:nth-child(odd) {
+
+			.member {
+				text-align: left;
+				float: right;
+
+				@media only screen and (max-width: 43.75rem) {
+					float: none;
+					width: auto;
+					margin-left: 9%;
+				}
+
+				@media only screen and (max-width: 30rem) {
+
+					.member__avatar {
+						margin: 0 3% 1% 0;
+					}
+
+					figcaption {
+						padding-right: 3%;
+						margin-left: 0;
+					}
+
+				}
+			}
+		}
+
+		&:nth-child(even) {
+
+			.member {
+				text-align: right;
+
+				.member__avatar {
+					float: right;
+
+					&:before {
+						right: -22px;
+						left: auto;
+						transform: rotateZ(180deg);
+					}
+				}
+
+				figcaption {
+					margin: 0 168px 0 0;
+				}
+
+				@media only screen and (max-width: 43.75rem) {
+					margin-left: 9%;
+					text-align: left;
+					width: auto;
+
+					.member__avatar {
+						float: left;
+
+						&:before {
+							left: -22px;
+							transform: none;
+						}
+					}
+
+					figcaption {
+						margin: 0 0 0 168px;
+					}
+				}
+
+				@media only screen and (max-width: 30rem) {
+
+					.member__avatar {
+						margin: 0 3% 1% 0;
+					}
+
+					figcaption {
+						padding-right: 3%;
+						margin-left: 0;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+.member {
+	margin: 0;
+	width: 46%;
+
+	.member__avatar {
+		background-color: $white;
+		border-radius: 50%;
+		border: 10px solid $iron3;
+		height: 150px;
+		width: 150px;
+		float: left;
+		text-align: center;
+		position: relative;
+		transition: all .3s ease-in;
+
+		img {
+			border-radius: 50%;
+			width: 100%;
+		}
+
+		em {
+			color: $primary-color;
+			display: inline-block;
+			font-size: 0.875rem;
+			line-height: 1.2em;
+			margin-top: 40px;
+			padding: 0 10px;
+			font-style: normal;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -22px;
+			margin-top: -10px;
+			height: 0;
+			width: 0;
+	    border-top: 10px solid transparent; 
+	    border-right: 20px solid $iron3; 
+	    border-bottom: 10px solid transparent; 
+	    transition: all .3s ease-in;
+		}
+	}
+
+	figcaption {
+		margin-left: 168px;
+
+		.button {
+			font-size: 0.875rem;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 10px 20px;
+
+			@extend %tomato-hover;
+		}
+	}
+
+	.member__name {
+		color: $steel;
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	.member__role {
+		font-style: italic;
+		font-size: 0.875rem;
+		line-height: 1em;
+	}
+}
+
+.timeline-wrap {
+	position: relative;
+}
+
+.timeline-column {
+	background-color: $iron3;
+	border-radius: 5px;
+	box-shadow: inset -1px 2px 2px rgba($black, .2);
+	height: 100%;
+	width: 10px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -5px;
+
+	@media only screen and (max-width: 43.75rem) {
+		left: 3%;
+	}
+}
