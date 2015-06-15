@@ -4679,7 +4679,7 @@ a:focus, a:hover {
         background-color: #24b3cb;
         color: #FFFFFF; }
 
-#branch-map-1 {
+#branch-map-1, #branch-map-2, #branch-map-3 {
   background-color: #9aa7af;
   height: 300px;
   width: 100%; }
