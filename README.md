@@ -3,6 +3,7 @@
 * Yeoman for scaffolding project
 * Bower for manage dependencies
 * Gruntjs for automatic tasks
+
 ## Dependencies
 * Zurb Foundation 5
 * jQuery
