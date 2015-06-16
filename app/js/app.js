@@ -7,15 +7,13 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 
-			window.addEventListener('load', function() {
-				new FastClick(document.body);
-			}, false);
-
 			$(document).foundation();
        
 			_userAgentInit();
 
 			// Custom js place here
+
+			FastClick.attach(document.body);
 
 			// search box appear when click
 			var searchForm = $('.search-form');
