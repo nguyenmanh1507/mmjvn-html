@@ -59,13 +59,8 @@
 	}
 
 	.position__status {
-		background-color: $iron3;
-	  border: 6px solid $white;
-	  border-radius: 50%;
-	  box-shadow: 0 0 8px rgba($black, .5);
-	  height: 24px;
-	  width: 24px;
 	  margin: 0 auto 20px;
-	 	transition: all .3s ease-in;
+
+	  @extend %status-dot;
 	}
 }

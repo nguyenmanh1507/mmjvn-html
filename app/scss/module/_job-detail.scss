@@ -1,0 +1,37 @@
+.job-detail {
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $steel;
+		font-size: 2.25rem;
+	}
+
+	.job-detail__meta {
+		color: $steel;
+		font-size: 1.5rem;
+		font-weight: 300;
+		font-style: italic;
+
+		&.is-available {
+
+			.dot {
+				background-color: $primary-color;
+				box-shadow: 0 0 8px rgba($primary-color, .5);
+			}
+		}
+		
+		.dot {
+			display: inline-block;
+			margin-right: 10px;
+
+			@extend %status-dot;
+		}
+
+		i.fa {
+			margin-right: 10px;
+			color: $primary-color;
+		}
+	}
+}

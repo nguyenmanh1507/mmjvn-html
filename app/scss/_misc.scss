@@ -57,6 +57,16 @@
 	}
 }
 
+%status-dot {
+	background-color: $iron3;
+  border: 6px solid $white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba($black, .5);
+  height: 24px;
+  width: 24px;
+ 	transition: all .3s ease-in;
+}
+
 // Placeholder function
 @mixin placeholder {
 	&::-webkit-input-placeholder {@content};
@@ -156,4 +166,9 @@
 			color: $white;
 		}
 	}
+}
+
+img.aligncenter {
+	display: block; 
+	margin: 0 auto;
 }
