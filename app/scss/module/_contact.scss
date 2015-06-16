@@ -1,3 +1,86 @@
+.contact-us {
+	padding: 4.38em 0 3.75em;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $steel;
+		font-size: 2.25rem;
+		text-align: center;
+		margin-bottom: 0.87em;
+	}
+}
+
+.contact-form {
+
+	@media only screen and (min-width: 64.063em) {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.columns {
+		position: relative;
+		
+		i.fa {
+			position: absolute;
+			right: 1.13em;
+			top: 0.46em;
+			font-size: 1.5rem;
+
+			@media only screen and (max-width: 46.125rem) {
+				font-size: 1.125rem;
+			}
+		}
+	}
+
+	.contact-form__field {
+		background-color: $smoke;
+		border: 0.17em solid $smoke;
+		border-radius: 0.42em;
+		box-shadow: none;
+		font-size: 1.5rem;
+		padding: 0.21em 1.67em 0.21em 0.63em;
+		height: auto;
+		position: relative;
+
+		@include placeholder {
+			color: $jet;
+			font-weight: 300;
+			font-style: italic;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $white;
+			border-color: $smoke;
+		}
+
+		&--textarea {
+			height: 7.5em;
+		}
+
+		@media only screen and (max-width: 46.125rem) {
+			font-size: 1.125rem;
+		}
+	}
+
+	.button {
+		border: 3px solid $primary-color;
+		border-radius: 5px;
+		background-color: transparent;
+		text-transform: uppercase;
+		color: $primary-color;
+		font-weight: 700;
+		margin-top: 1.88em;
+
+		&:hover {
+			background-color: $primary-color;
+			color: $white;
+		}
+	}
+}
+
 .address-list {
 
 	li {

@@ -4583,6 +4583,73 @@ a:focus, a:hover {
     margin: 0 auto 20px;
     transition: all .3s ease-in; }
 
+.contact-us {
+  padding: 4.38em 0 3.75em; }
+  .contact-us h1, .contact-us h2, .contact-us h3, .contact-us h4 {
+    color: #2f383d;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 0.87em; }
+
+@media only screen and (min-width: 64.063em) {
+  .contact-form {
+    width: 80%;
+    margin: 0 auto; } }
+.contact-form .columns {
+  position: relative; }
+  .contact-form .columns i.fa {
+    position: absolute;
+    right: 1.13em;
+    top: 0.46em;
+    font-size: 1.5rem; }
+    @media only screen and (max-width: 46.125rem) {
+      .contact-form .columns i.fa {
+        font-size: 1.125rem; } }
+.contact-form .contact-form__field {
+  background-color: #eff5f7;
+  border: 0.17em solid #eff5f7;
+  border-radius: 0.42em;
+  box-shadow: none;
+  font-size: 1.5rem;
+  padding: 0.21em 1.67em 0.21em 0.63em;
+  height: auto;
+  position: relative; }
+  .contact-form .contact-form__field::-webkit-input-placeholder {
+    color: #9aa7af;
+    font-weight: 300;
+    font-style: italic; }
+  .contact-form .contact-form__field:-moz-placeholder {
+    color: #9aa7af;
+    font-weight: 300;
+    font-style: italic; }
+  .contact-form .contact-form__field::-moz-placeholder {
+    color: #9aa7af;
+    font-weight: 300;
+    font-style: italic; }
+  .contact-form .contact-form__field:-ms-input-placeholder {
+    color: #9aa7af;
+    font-weight: 300;
+    font-style: italic; }
+  .contact-form .contact-form__field:hover, .contact-form .contact-form__field:focus {
+    background-color: #FFFFFF;
+    border-color: #eff5f7; }
+  .contact-form .contact-form__field--textarea {
+    height: 7.5em; }
+  @media only screen and (max-width: 46.125rem) {
+    .contact-form .contact-form__field {
+      font-size: 1.125rem; } }
+.contact-form .button {
+  border: 3px solid #24b3cb;
+  border-radius: 5px;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #24b3cb;
+  font-weight: 700;
+  margin-top: 1.88em; }
+  .contact-form .button:hover {
+    background-color: #24b3cb;
+    color: #FFFFFF; }
+
 .address-list li {
   background-color: #eff5f7;
   background-image: url(../images/polygon-4.png), url(../images/polygon-2.png);
