@@ -1,0 +1,105 @@
+.apply-form-intro {
+
+	h1, 
+	h2,
+	h3,
+	h4 {
+		color: $steel;
+		font-size: 2.25rem;
+	}
+
+	p {
+		color: $steel;
+		font-size: 1.5rem;
+		font-weight: 300;		
+	}
+
+	span {
+		color: $primary-color;
+	}
+}
+
+.apply-form {
+
+	label {
+		font-size: 1.875rem;
+		font-weight: 300;
+
+		i.fa {
+			font-size: 16px;
+			color: $primary-color;
+			vertical-align: top;
+		}
+
+		@media only screen and (max-width: 64em) { 
+			font-size: 1.125rem;
+		}
+
+		@media only screen and (max-width: 40em) { 
+			margin-bottom: 0;
+
+			&.right {
+				float: none !important;
+				text-align: left;
+			}
+		}
+	}
+
+	.apply-form__field {
+		border: 3px solid $jet;
+		box-shadow: none;
+		border-radius: 5px;
+		height: auto;
+		font-size: 1.5rem;
+		transition: all .3s ease-in;
+
+		@include placeholder {
+			font-style: italic;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&--tall {
+			height: 10.21em;
+		}
+
+		&--short {
+			width: 72px;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: $primary-color;
+		}
+
+		@media only screen and (max-width: 64em) { 
+			font-size: 1.125rem;
+		}
+	}
+
+	span {
+		font-size: 1.5rem;
+		float: left;
+		margin-right: 15px;
+	}
+
+	button[type="submit"] {
+		border-radius: 5px;
+		text-transform: uppercase;
+		font-size: 1.875rem;
+		float: right;
+
+		&:hover {
+			background-color: tomato;
+		}
+
+		@media only screen and (max-width: 64em) { 
+			float: none;
+			margin-top: 1.67em;
+			font-size: 1.125rem;
+			width: 100%;
+		}
+	}
+}
