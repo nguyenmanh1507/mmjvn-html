@@ -6,6 +6,11 @@ var app = (function(document, $) {
 			docElem.setAttribute('data-useragent', navigator.userAgent);
 		},
 		_init = function() {
+
+			window.addEventListener('load', function() {
+				new FastClick(document.body);
+			}, false);
+
 			$(document).foundation();
        
 			_userAgentInit();
@@ -117,7 +122,10 @@ var app = (function(document, $) {
 		  });
 
 		  // Support placeholder for older browser (IE9, Opera Mini)
-		  $('input, textarea').placeholder();
+		  // check plugin is loaded
+		  if($.placeholder) {
+		  	$('input, textarea').placeholder();
+		  }
 
 		};
 	return {
