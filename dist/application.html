@@ -116,7 +116,6 @@
     ================================================== -->
 
 
-
     <!-- BREADCRUMB
     ================================================== -->
     
@@ -126,7 +125,8 @@
           
           <ul class="bc">
             <li class="bc__item"><a href="#">Home</a></li>
-            <li class="bc__item">About Us</li>
+            <li class="bc__item"><a href="#">Recruitment</a></li>
+            <li class="bc__item">Application</li>
           </ul>
           <!-- /.bc -->
 
@@ -144,154 +144,171 @@
     <!-- MAIN CONTENT
     ================================================== -->
 
-    <section class="about-us">
-
-      <h2 class="show-for-sr">About Us Section</h2>
-      
+    <div class="polygon-bg padding-big">
       <div class="row">
-        <div class="small-12 medium-5 medium-push-7 columns">
+        <div class="small-12 columns">
           
-          <div class="about-us__intro">
-            <h3>Introduction</h3>
-            <p>Media Max Japan, has been missing most in the IT world (the development capabilities of) high-quality resources and their biggest strengths. In addition, it has Web Marketing features such as SEO, the Web Design function to support the objectives of the client in the house, In anticipation also the creation of new company business, is a company that continues to challenge.</p>
-            <p>Computer Science × Information Science × Web Marketing × Web Design = mmj solution Personality and experience of "us + you" to participate in the mmj, technology and as multiplication of feelings is able to create a new comfort in the world. Media Max Japan</p>
-          </div>
-          <!-- /.about-us__intro -->
-    
-        </div>
-        <div class="small-12 medium-7 medium-pull-5 columns">
-          
-          <div class="about-us__slider flexslider">
-            <ul class="slides">
-              <li>
-                <img src="images/about-us/slide-img.jpg" alt="slide image">
-              </li>
-              <li>
-                <img src="images/about-us/slide-img.jpg" alt="slide image">
-              </li>
-              <li>
-                <img src="images/about-us/slide-img.jpg" alt="slide image">
-              </li>
-            </ul>
-          </div>
-          <!-- /.about-us__slider -->
+          <section class="apply-form-intro">
+            <h2>Job Application Form</h2>
+            <p>Please fill up all the area where has the &quot;<span>&lowast;</span>&quot;<br>Your data will be safe.</p>
+            <p>Your e-mail address will not be published. Also other data will not be shared with third person.
+All fields are required.</p>
+          </section>
+          <!-- /.apply-form -->
+
+          <form action="/" class="apply-form">
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-pos" class="right inline">Position <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+                
+                <select name="af-pos" id="af-pos" class="apply-form__field">
+                  <option value="web-designer" selected>Graphic/Web Designer</option>
+                  <option value="front-end">Front End Developer</option>
+                  <option value="back-end">Back End Developer</option>
+                </select>
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-name" class="right inline">Name <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <input type="text" name="af-name" id="af-name" class="apply-form__field" placeholder="Please type your name">
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-email" class="right inline">Email <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <input type="email" name="af-email" id="af-email" class="apply-form__field" placeholder="Please type your email">
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-phone" class="right inline">Phone <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <input type="text" name="af-phone" id="af-phone" class="apply-form__field" placeholder="Please type your phone number">
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-edu" class="right inline">Educational qualification <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <select name="af-edu" id="af-edu" class="apply-form__field">
+                  <option value="daihoc" selected>Dai Hoc Chinh Quy</option>
+                  <option value="caodang">Cao Dang</option>
+                  <option value="trungcap">Trung Cap</option>
+                </select>
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-exp" class="right inline">Experience <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <input type="text" name="af-exp" id="af-exp" class="apply-form__field" placeholder="Example: 2 years">
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-cv" class="right inline">CV <i class="fa fa-asterisk"></i></label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <input type="file" name="af-cv" id="af-cv" class="apply-form__field apply-form__field--attach">
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-intro" class="right inline">Introduce yourself</label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <textarea name="af-intro" id="af-intro" class="apply-form__field apply-form__field--tall" placeholder="Introduce yourself"></textarea>
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+
+                <label for="af-other" class="right inline">Another infomation</label>
+
+              </div>
+              <div class="small-12 medium-6 medium-pull-3 columns">
+
+                <textarea name="af-other" id="af-other" class="apply-form__field apply-form__field--tall" placeholder="Another Infomation"></textarea>
+
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+                
+                <label for="af-question" class="right inline">Question</label>
+
+              </div>
+              <div class="small-12 medium-3 columns">
+                
+                <span>2 + 2 =</span>
+                <input type="text" name="af-question" id="af-question" class="apply-form__field apply-form__field--short">
+
+              </div> 
+              <div class="small-12 medium-3 medium-pull-3 columns">
+                <button type="submit" class="button">Apply</button>
+              </div>
+            </div>
+            <!-- /.row -->
+          </form>
+          <!-- /.apply-form -->
 
         </div>
       </div>
       <!-- /.row -->
-
-    </section>
-    <!-- /.about-us -->
-    
-    <div class="polygon-bg padding-big">
-      <section class="ourteam">
-        
-        <h2>Meet Our Amazing Team!</h2>
-
-        <div class="timeline-wrap">
-          <div class="row">
-              
-            <ul class="timeline no-bullet">
-              <li class="timeline__item clearfix">
-                <figure class="member">
-                  <div class="member__avatar" >
-                    <img src="images/about-us/member-1.jpg" alt="member avatar">
-                  </div>
-                  <figcaption>
-                    <h3 class="member__name">Mr. Tasaki</h3>
-                    <!-- /.member__name -->
-                    <small class="member__role">President</small>
-                    <p class="member__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi delectus ad blanditiis accusamus aut distinctio.</p>
-                    <a href="#" class="button radius">Full story</a>
-                  </figcaption>
-                </figure>
-                <!-- /.member -->
-              </li>
-              <!-- /.timeline__item -->
-              <li class="timeline__item clearfix">
-                <figure class="member">
-                  <div class="member__avatar" >
-                    <img src="images/about-us/member-1.jpg" alt="member avatar">
-                  </div>
-                  <figcaption>
-                    <h3 class="member__name">Mr. Tasaki</h3>
-                    <!-- /.member__name -->
-                    <small class="member__role">President</small>
-                    <p class="member__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi delectus ad blanditiis accusamus aut distinctio.</p>
-                    <a href="#" class="button radius">Full story</a>
-                  </figcaption>
-                </figure>
-                <!-- /.member -->
-              </li>
-              <!-- /.timeline__item -->
-              <li class="timeline__item clearfix">
-                <figure class="member">
-                  <div class="member__avatar" >
-                    <img src="images/about-us/member-1.jpg" alt="member avatar">
-                  </div>
-                  <figcaption>
-                    <h3 class="member__name">Mr. Tasaki</h3>
-                    <!-- /.member__name -->
-                    <small class="member__role">President</small>
-                    <p class="member__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi delectus ad blanditiis accusamus aut distinctio.</p>
-                    <a href="#" class="button radius">Full story</a>
-                  </figcaption>
-                </figure>
-                <!-- /.member -->
-              </li>
-              <!-- /.timeline__item -->
-              <li class="timeline__item clearfix">
-                <figure class="member">
-                  <div class="member__avatar" >
-                    <img src="images/about-us/member-1.jpg" alt="member avatar">
-                  </div>
-                  <figcaption>
-                    <h3 class="member__name">Mr. Tasaki</h3>
-                    <!-- /.member__name -->
-                    <small class="member__role">President</small>
-                    <p class="member__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi delectus ad blanditiis accusamus aut distinctio.</p>
-                    <a href="#" class="button radius">Full story</a>
-                  </figcaption>
-                </figure>
-                <!-- /.member -->
-              </li>
-              <!-- /.timeline__item -->
-              <li class="timeline__item clearfix">
-                <figure class="member">
-                  <div class="member__avatar" >
-                    <em>We are looking for new talent</em>
-                  </div>
-                  <figcaption>
-                    <h3 class="member__name">You - Yes, you!</h3>
-                    <!-- /.member__name -->
-                    <small class="member__role">Talent</small>
-                    <p class="member__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi delectus ad blanditiis accusamus aut distinctio.</p>
-                    <a href="#" class="button radius">Join Us!</a>
-                  </figcaption>
-                </figure>
-                <!-- /.member -->
-              </li>
-              <!-- /.timeline__item -->
-            </ul>
-            <!-- /.timeline -->
-
-          </div>
-          <!-- /.row -->
-          <div class="timeline-column"></div>
-          <!-- /.timeline__column -->
-        </div>
-        <!-- /.timeline -->
-
-        <a href="#" class="button button--black">More</a>
-
-      </section>
-      <!-- /.timeline -->
     </div>
-    <!-- /.polygon-bg -->
-    
+
     <!-- END MAIN CONTENT
     ================================================== -->
-
 
 
 
@@ -391,6 +408,7 @@
       
     <!-- END FOOTER
     ================================================== -->
+    
 
     <script src="js/vendor/libraries.min.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
