@@ -116,6 +116,9 @@ var app = (function(document, $) {
 		  	controlNav: false
 		  });
 
+		  // Support placeholder for older browser (IE9, Opera Mini)
+		  $('input, textarea').placeholder();
+
 		};
 	return {
 		init: _init
