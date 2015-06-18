@@ -14,6 +14,7 @@
 	"globals": {
 		"jQuery": false,
 		"$": false,
-		"FastClick": false
+		"FastClick": false,
+		"google": false
 	}
 }
